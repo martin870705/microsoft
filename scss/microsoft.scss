@@ -20,7 +20,7 @@ body {
                 .logo {
                     // width: calc(100% / 2);
                     height: 60px;
-
+                    // padding: 0px 0px 15px 0px;
                     float: left;
                     display: flex;
                     justify-content: start;
@@ -28,6 +28,9 @@ body {
 
                     .logo-picture {
                         width: 138px;
+                        padding-left: 5px;
+                        border: 1px solid rgba($color: #000000, $alpha: 0);
+
                         // height: 60px;
                         // background-color: beige;
                         margin-right: 40px;
@@ -39,28 +42,44 @@ body {
                             // height: 60px;
 
                         }
-                        &:hover{
-                            cursor: pointer;
-                        }
-                    }
 
-                    .link {
-                        line-height: 60px;
-                        height: 60px;
-                        // background-color: coral;
-                        margin-right: 20px;
-                        padding: 0px 10px;
-                        border: 1px solid rgba($color: #000000, $alpha: 0);
-                        &:hover{
-                            text-decoration: underline;
-                            text-decoration-thickness: 2px;
-                            text-underline-offset:2px;
+                        &:hover {
                             cursor: pointer;
                         }
-                        &:active{
+                        &:active {
                             border: 1px dashed #000;
                         }
                     }
+
+                    .connect {
+                        padding-top: 2px;
+                        padding-bottom: 10px;
+                        display: flex;
+                        justify-content: start;
+
+                        .link {
+                            line-height: 60px;
+                            height: 100%;
+                            // background-color: coral;
+                            margin-right: 20px;
+                            // margin-top: 1px;
+                            padding: 0px 10px;
+                            border: 1px solid rgba($color: #000000, $alpha: 0);
+
+                            &:hover {
+                                text-decoration: underline;
+                                text-decoration-thickness: 2px;
+                                text-underline-offset: 2px;
+                                cursor: pointer;
+                            }
+
+                            &:active {
+                                border: 1px dashed #000;
+                            }
+                        }
+                    }
+
+
 
                 }
 
@@ -77,20 +96,27 @@ body {
                         line-height: 60px;
                         margin-right: 15px;
                         font-size: 10px;
-                        &:hover{
+                        padding: 0px 10px;
+                        border: 1px solid rgba($color: #000000, $alpha: 0);
+
+                        &:hover {
                             text-decoration: underline;
                             text-decoration-thickness: 2px;
-                            text-underline-offset:5px;
+                            text-underline-offset: 5px;
                             cursor: pointer;
                         }
+                        &:active {
+                            border: 1px dashed #000;
+                        }
                     }
-                    .search{
+
+                    .search {
                         margin-right: 60px;
                     }
-                    
+
 
                     .login {
-                        width: 65px;
+                        width: 80px;
                         display: flex;
                         justify-content: space-between;
                         align-items: center;
@@ -98,7 +124,8 @@ body {
                         img {
                             height: 30px;
                         }
-                        &:hover{
+
+                        &:hover {
                             text-decoration: none;
                         }
                     }
