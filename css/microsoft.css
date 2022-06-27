@@ -99,4 +99,7 @@ body header #nav nav .search-login .login img {
 }
 body header #nav nav .search-login .login:hover {
   text-decoration: none;
+}
+body header .banner picture img {
+  width: 100%;
 }/*# sourceMappingURL=microsoft.css.map */
