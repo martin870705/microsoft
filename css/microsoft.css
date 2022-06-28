@@ -136,7 +136,8 @@ body main .banner .picture-word-shell .picture-word h1 {
 body main .banner .picture-word-shell .picture-word .describe {
   margin-bottom: 15px;
 }
-body main .banner .picture-word-shell .picture-word button {
+body main .banner .picture-word-shell .picture-word p {
+  display: inline-block;
   border: 0px;
   background-color: #0067b8;
   color: white;
@@ -155,7 +156,6 @@ body main .container-top {
 body main .container-top ul {
   width: 100%;
   height: 100px;
-  background-color: burlywood;
   display: flex;
   justify-content: center;
   text-align: center;
@@ -179,11 +179,13 @@ body main .container-top ul li a {
 body main .container-mid {
   display: flex;
   justify-content: center;
-  padding: 0px 80px;
+  padding: 0px 10%;
+  margin: 50px 0px;
+  display: flex;
+  justify-content: space-between;
 }
 body main .container-mid .commodity {
-  width: calc((100% - 160px) / 4);
-  padding: 0px 12px;
+  width: calc(25% - 12px);
 }
 body main .container-mid .commodity img {
   width: 100%;
@@ -197,7 +199,104 @@ body main .container-mid .commodity .link-group {
   margin-top: 20px;
 }
 body main .container-mid .commodity .link-group a {
+  font-size: 18px;
   color: #0067b8;
   text-decoration: none;
   margin: 16px 24px 16px 0px;
+  display: block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  float: left;
+}
+body main .banner-2 {
+  width: 100%;
+  margin: 50px 0px 80px;
+  padding: 0px 10%;
+  position: relative;
+}
+body main .banner-2 picture img {
+  width: 100%;
+}
+body main .banner-2 .picture-word-shell {
+  width: calc(100% - 150px);
+  position: absolute;
+  top: 0;
+  padding-left: 5%;
+  padding-top: 10%;
+}
+body main .banner-2 .picture-word-shell .picture-word {
+  width: 24%;
+}
+body main .banner-2 .picture-word-shell .picture-word h1 {
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+body main .banner-2 .picture-word-shell .picture-word .describe {
+  margin-bottom: 15px;
+}
+body main .banner-2 .picture-word-shell .picture-word button {
+  border: 0px;
+  background-color: #0067b8;
+  color: white;
+  font-size: 15px;
+  padding: 10px 15px;
+}
+body main .container-bot {
+  padding: 0px 10%;
+}
+body main .container-bot h1 {
+  margin-bottom: 20px;
+}
+body main .container-bot .information {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+body main .container-bot .information .card {
+  width: calc(25% - 12px);
+  margin-bottom: 60px;
+}
+body main .container-bot .information .card ul {
+  list-style-type: none;
+  float: left;
+}
+body main .container-bot .information .card ul li {
+  display: inline-block;
+  padding: 5px 15px;
+  background-color: #ffb900;
+}
+body main .container-bot .information .card picture img {
+  width: 100%;
+  margin-bottom: 15px;
+}
+body main .container-bot .information .card .word h2 {
+  font-size: 30px;
+  margin: 40px 0px 20px;
+}
+body main .container-bot .information .card .word a {
+  margin-top: 20px;
+  font-size: 18px;
+  color: #0067b8;
+  text-decoration: none;
+  display: block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+body main .container-bot .community {
+  margin-bottom: 100px;
+}
+body main .container-bot .community ul {
+  width: 200px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+body main .container-bot .community ul li {
+  list-style-type: none;
+}
+body main .container-bot .community ul img {
+  width: 32px;
+  height: 32px;
 }/*# sourceMappingURL=microsoft.css.map */
