@@ -13,7 +13,6 @@ body header #nav nav {
 }
 body header #nav nav .logo {
   height: 60px;
-  float: left;
   display: flex;
   justify-content: start;
   font-size: 10px;
@@ -100,6 +99,36 @@ body header #nav nav .search-login .login img {
 body header #nav nav .search-login .login:hover {
   text-decoration: none;
 }
-body header .banner picture img {
+body main picture {
+  position: relative;
+}
+body main picture img {
   width: 100%;
+}
+body main picture .picture-word {
+  position: absolute;
+  bottom: 210px;
+  left: 10%;
+  width: 30%;
+  padding: 20px;
+}
+body main picture .picture-word .news-release {
+  display: inline-block;
+  padding: 5px 15px;
+  background-color: #ffb900;
+  margin-bottom: 15px;
+}
+body main picture .picture-word h1 {
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+body main picture .picture-word .describe {
+  margin-bottom: 15px;
+}
+body main picture .picture-word button {
+  border: 0px;
+  background-color: #0067b8;
+  color: white;
+  font-size: 15px;
+  padding: 10px 15px;
 }/*# sourceMappingURL=microsoft.css.map */

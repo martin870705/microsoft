@@ -21,7 +21,7 @@ body {
                     // width: calc(100% / 2);
                     height: 60px;
                     // padding: 0px 0px 15px 0px;
-                    float: left;
+                    // float: left;
                     display: flex;
                     justify-content: start;
                     font-size: 10px;
@@ -93,7 +93,7 @@ body {
                     justify-content: end;
 
                     .all {
-                        
+
                         i {
                             position: absolute;
                             top: 30px;
@@ -144,12 +144,51 @@ body {
                 }
             }
         }
-        .banner{
-            picture{
-                img{
-                    width: 100%;
+    }
+
+    main {
+        picture {
+            position: relative;
+
+            img {
+                width: 100%;
+            }
+
+            .picture-word {
+                position: absolute;
+                bottom: 210px;
+                left: 10%;
+                width: 30%;
+                padding: 20px;
+
+                .news-release {
+                    display: inline-block;
+                    padding: 5px 15px;
+                    background-color: #ffb900;
+                    margin-bottom: 15px;
+                }
+
+                h1 {
+                    font-size: 40px;
+                    margin-bottom: 15px;
+                }
+
+                .describe {
+                    margin-bottom: 15px;
+                }
+
+                button {
+                    border: 0px;
+                    background-color: #0067b8;
+                    color: white;
+                    font-size: 15px;
+                    padding: 10px 15px;
                 }
             }
+
+
+
+
         }
     }
 }
