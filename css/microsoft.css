@@ -134,7 +134,7 @@ body main .banner .picture-word-shell .picture-word .news-release {
   margin-bottom: 15px;
 }
 body main .banner .picture-word-shell .picture-word h1 {
-  font-size: 40px;
+  font-size: 37px;
   margin-bottom: 15px;
 }
 body main .banner .picture-word-shell .picture-word .describe {
@@ -148,10 +148,47 @@ body main .banner .picture-word-shell .picture-word p {
   font-size: 15px;
   padding: 10px 15px;
 }
+@media (max-width: 1086px) {
+  body main .banner .picture-word-shell .picture-word {
+    width: 100%;
+    background-color: white;
+    padding: 48px;
+    box-shadow: 0px 0px 8px rgb(107, 107, 107);
+  }
+}
+@media (max-width: 860px) {
+  body main .banner .picture-word-shell .picture-word {
+    box-shadow: 0px 4px 5px rgba(107, 107, 107, 0.39);
+  }
+}
+@media (max-width: 1086px) {
+  body main .banner .picture-word-shell {
+    position: absolute;
+    top: 90%;
+    padding: 0px 12px;
+    width: 100%;
+  }
+}
+@media (max-width: 860px) {
+  body main .banner .picture-word-shell {
+    position: unset;
+    padding: 0px;
+  }
+}
 body main .carousel-button {
   width: 100%;
   height: 50px;
   background-color: bisque;
+}
+@media (max-width: 1086px) {
+  body main .carousel-button {
+    margin-bottom: 200px;
+  }
+}
+@media (max-width: 860px) {
+  body main .carousel-button {
+    display: none;
+  }
 }
 body main .container-top {
   padding-top: 50px;
@@ -164,6 +201,7 @@ body main .container-top ul {
   justify-content: center;
   text-align: center;
   list-style-type: none;
+  flex-wrap: wrap;
 }
 body main .container-top ul li {
   width: 200px;
@@ -172,6 +210,7 @@ body main .container-top ul li {
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
+  margin-bottom: 20px;
 }
 body main .container-top ul li img {
   width: 40px;
@@ -209,6 +248,11 @@ body main .container-mid .outer-frame .commodity .word h2 {
     font-size: 25px;
   }
 }
+@media (max-width: 1086px) {
+  body main .container-mid .outer-frame .commodity .word h2 {
+    font-size: 21px;
+  }
+}
 body main .container-mid .outer-frame .commodity .link-group a {
   font-size: 18px;
   color: #0067b8;
@@ -227,8 +271,19 @@ body main .container-mid .outer-frame .commodity .link-group a::after {
   content: ">";
 }
 @media (max-width: 1086px) {
+  body main .container-mid .outer-frame .commodity .link-group a {
+    font-size: 16px;
+  }
+}
+@media (max-width: 1086px) {
   body main .container-mid .outer-frame .commodity {
     width: 50%;
+    padding: 0px 12px;
+  }
+}
+@media (max-width: 540px) {
+  body main .container-mid .outer-frame .commodity {
+    width: 100%;
     padding: 0px 12px;
   }
 }
@@ -282,8 +337,47 @@ body main .banner-2 .picture-word-shell .picture-word button {
   padding: 10px 15px;
 }
 @media (max-width: 1086px) {
+  body main .banner-2 .picture-word-shell .picture-word {
+    width: 100%;
+    background-color: white;
+    padding: 48px;
+    box-shadow: 0px 0px 8px rgb(107, 107, 107);
+  }
+}
+@media (max-width: 860px) {
+  body main .banner-2 .picture-word-shell .picture-word {
+    padding: 48px 12px;
+    box-shadow: 0px 0px 0px rgb(107, 107, 107);
+  }
+}
+@media (max-width: 1086px) {
+  body main .banner-2 .picture-word-shell {
+    position: absolute;
+    top: 95%;
+    padding: 0px 12px;
+    width: 100%;
+  }
+}
+@media (max-width: 860px) {
+  body main .banner-2 .picture-word-shell {
+    position: unset;
+    padding: 0px;
+    width: 100%;
+  }
+}
+@media (max-width: 1086px) {
   body main .banner-2 {
     padding: 0px;
+  }
+}
+@media (max-width: 1086px) {
+  body main .banner-2 {
+    margin-bottom: 300px;
+  }
+}
+@media (max-width: 860px) {
+  body main .banner-2 {
+    margin-bottom: 20px;
   }
 }
 body main .container-bot {
@@ -291,6 +385,12 @@ body main .container-bot {
 }
 body main .container-bot h1 {
   margin-bottom: 20px;
+}
+@media (max-width: 1086px) {
+  body main .container-bot h1 {
+    padding-left: 12px;
+    font-size: 24px;
+  }
 }
 body main .container-bot .information {
   width: 100%;
@@ -323,6 +423,11 @@ body main .container-bot .information .card .word h2 {
     font-size: 25px;
   }
 }
+@media (max-width: 1086px) {
+  body main .container-bot .information .card .word h2 {
+    font-size: 21px;
+  }
+}
 body main .container-bot .information .card .word p {
   margin-bottom: 20px;
 }
@@ -337,6 +442,29 @@ body main .container-bot .information .card .word a {
 }
 body main .container-bot .information .card .word a:hover {
   text-decoration: underline;
+}
+@media (max-width: 1086px) {
+  body main .container-bot .information .card .word a {
+    font-size: 16px;
+  }
+}
+@media (max-width: 1086px) {
+  body main .container-bot .information .card {
+    width: 50%;
+    padding: 0px 12px;
+  }
+}
+@media (max-width: 540px) {
+  body main .container-bot .information .card {
+    width: 100%;
+    padding: 0px 12px;
+  }
+}
+@media (max-width: 1086px) {
+  body main .container-bot .information {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 body main .container-bot .community {
   margin-bottom: 100px;
@@ -353,6 +481,16 @@ body main .container-bot .community ul li {
 body main .container-bot .community ul img {
   width: 32px;
   height: 32px;
+}
+@media (max-width: 1086px) {
+  body main .container-bot .community {
+    padding-left: 12px;
+  }
+}
+@media (max-width: 1086px) {
+  body main .container-bot {
+    padding: 0px;
+  }
 }
 body main .footer {
   width: 100%;
@@ -384,8 +522,26 @@ body main .footer .table .list li a {
 body main .footer .table .list li a:hover {
   text-decoration: underline;
 }
+@media (max-width: 1086px) {
+  body main .footer .table .list {
+    width: 33.3333333333%;
+    padding: 0px;
+  }
+}
+@media (max-width: 540px) {
+  body main .footer .table .list {
+    width: 100%;
+    padding: 0px;
+  }
+}
 body main .footer .table .latest-trends {
   padding-left: 0px;
+}
+@media (max-width: 1086px) {
+  body main .footer .table {
+    padding: 0px 24px;
+    flex-wrap: wrap;
+  }
 }
 body main .footer .statement {
   padding: 0px 5%;
@@ -403,6 +559,11 @@ body main .footer .statement .earth a {
 body main .footer .statement .earth a:hover {
   text-decoration: underline;
 }
+@media (max-width: 540px) {
+  body main .footer .statement .earth {
+    margin-bottom: 24px;
+  }
+}
 body main .footer .statement .microsoft-link ul {
   display: flex;
 }
@@ -416,4 +577,20 @@ body main .footer .statement .microsoft-link ul li a {
 }
 body main .footer .statement .microsoft-link ul li a:hover {
   text-decoration: underline;
+}
+@media (max-width: 540px) {
+  body main .footer .statement .microsoft-link ul li {
+    margin-right: 5px;
+  }
+}
+@media (max-width: 1086px) {
+  body main .footer .statement {
+    padding: 0px 24px 16px 24px;
+  }
+}
+@media (max-width: 540px) {
+  body main .footer .statement {
+    padding: 0px 24px 20px;
+    flex-direction: column;
+  }
 }/*# sourceMappingURL=microsoft.css.map */
