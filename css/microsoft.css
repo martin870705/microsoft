@@ -9,159 +9,92 @@
 body header #nav {
   width: 100%;
   height: 60px;
-  padding: 0px 8%;
 }
 body header #nav nav {
-  display: flex;
-  justify-content: space-between;
+  position: relative;
+  width: 100%;
+  height: 60px;
+  padding: 0px 8%;
 }
 body header #nav nav .logo {
-  width: 60%;
-  height: 60px;
-}
-body header #nav nav .logo .logo-picture {
   float: left;
-  margin-right: 5px;
   padding-top: 15px;
   border: 1px solid rgba(0, 0, 0, 0);
 }
-body header #nav nav .logo .logo-picture img {
+body header #nav nav .logo img {
   width: 120px;
 }
-body header #nav nav .logo .logo-picture:hover {
+body header #nav nav .logo:hover {
   cursor: pointer;
 }
-body header #nav nav .logo .logo-picture:active {
+body header #nav nav .logo:active {
   border: 1px dashed #000;
 }
-body header #nav nav .logo .connect ul {
-  position: relative;
+body header #nav nav label {
+  float: right;
+  line-height: 60px;
 }
-body header #nav nav .logo .connect ul li {
-  float: left;
+body header #nav nav input {
+  display: none;
+}
+body header #nav nav #check:checked + div > .all-list {
+  display: flex;
+}
+body header #nav nav .hamburger {
+  float: right;
+}
+body header #nav nav .hamburger .list {
+  position: absolute;
+  display: flex;
+  left: 20%;
+}
+body header #nav nav .hamburger .list a {
+  color: #000;
+  text-decoration: none;
+  height: 50px;
   line-height: 60px;
   font-size: 13px;
   padding: 0px 10px;
   border: 1px solid rgba(0, 0, 0, 0);
 }
-body header #nav nav .logo .connect ul li a {
-  color: #000;
-  text-decoration: none;
-}
-body header #nav nav .logo .connect ul li:hover {
+body header #nav nav .hamburger .list a:hover {
   text-decoration: underline;
   text-decoration-thickness: 2px;
   text-underline-offset: 2px;
 }
-body header #nav nav .logo .connect ul li:active {
+body header #nav nav .hamburger .list a:active {
   border: 1px dashed #000;
 }
-@media (max-width: 1086px) {
-  body header #nav nav .logo .connect ul .help {
-    display: none;
-  }
-}
-@media (max-width: 860px) {
-  body header #nav nav .logo .connect ul .help {
-    display: block;
-  }
-}
-@media (max-width: 1086px) {
-  body header #nav nav .logo .connect ul .xbox {
-    display: none;
-  }
-}
-@media (max-width: 860px) {
-  body header #nav nav .logo .connect ul .xbox {
-    display: block;
-  }
-}
-body header #nav nav .logo .connect ul #more {
-  display: none;
-}
-body header #nav nav .logo .connect ul #more:checked ~ ul {
-  display: block;
-}
-body header #nav nav .logo .connect ul #more:checked + label {
-  background-color: #f2f2f2;
-}
-body header #nav nav .logo .connect ul ul {
-  width: 170px;
-  position: absolute;
-  top: 60px;
-  right: -15px;
-  background-color: #f2f2f2;
-  box-shadow: 0px 6px 5px rgb(107, 107, 107);
-  border-bottom: 2px solid black;
-  z-index: 1;
-  display: none;
-}
-body header #nav nav .logo .connect ul ul li {
-  float: none;
-  line-height: 0;
-  padding: 18px 0px 18px 24px;
-}
-body header #nav nav .logo .connect ul ul li:hover {
-  cursor: pointer;
-}
-body header #nav nav .logo .connect ul .more {
-  display: none;
-}
-@media (max-width: 1086px) {
-  body header #nav nav .logo .connect ul .more {
-    display: block;
-  }
-}
-@media (max-width: 860px) {
-  body header #nav nav .logo .connect ul .more {
-    display: none;
-  }
-}
-body header #nav nav .search-login {
-  width: 40%;
-  display: flex;
-  justify-content: end;
-  font-size: 13px;
-  position: relative;
-}
-body header #nav nav .search-login input {
-  display: none;
-}
-body header #nav nav .search-login #check:checked + label {
-  background-color: #f2f2f2;
-}
-body header #nav nav .search-login #check:checked ~ ul {
-  display: flex;
-}
-body header #nav nav .search-login .all-list {
+body header #nav nav .hamburger .all-list {
   width: 1230px;
   position: absolute;
   top: 60px;
-  background-color: #f2f2f2;
-  z-index: 1;
+  right: 0px;
+  display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  box-shadow: 0px 6px 5px rgb(107, 107, 107);
-  border-bottom: 3px solid black;
+  z-index: 1;
+  background-color: #f2f2f2;
   display: none;
 }
-body header #nav nav .search-login .all-list ul {
-  width: 16.6666666667%;
+body header #nav nav .hamburger .all-list ul {
+  width: 205px;
 }
-body header #nav nav .search-login .all-list ul li {
+body header #nav nav .hamburger .all-list ul li {
   padding: 12px 0px 12px 24px;
 }
-body header #nav nav .search-login .all-list ul :first-child {
+body header #nav nav .hamburger .all-list ul li:first-child {
   font-weight: bold;
 }
-body header #nav nav .search-login .all-list span {
+body header #nav nav .hamburger .all-list span {
   width: 100%;
-  text-align: center;
-  padding: 12px 0px 12px 24px;
-  background-color: #e6e6e6;
+}
+body header #nav nav .search-login {
+  float: right;
+  display: flex;
+  line-height: 60px;
 }
 body header #nav nav .search-login .link {
-  line-height: 60px;
+  height: 55px;
   padding: 0px 10px;
   border: 1px solid rgba(0, 0, 0, 0);
 }
@@ -169,12 +102,7 @@ body header #nav nav .search-login .link a {
   color: #000;
   text-decoration: none;
 }
-@media (max-width: 1400px) {
-  body header #nav nav .search-login .link a span {
-    display: none;
-  }
-}
-body header #nav nav .search-login .link:hover {
+body header #nav nav .search-login .link a:hover {
   text-decoration: underline;
   text-decoration-thickness: 2px;
   text-underline-offset: 5px;
@@ -182,45 +110,12 @@ body header #nav nav .search-login .link:hover {
 body header #nav nav .search-login .link:active {
   border: 1px dashed #000;
 }
-body header #nav nav .search-login .search {
-  margin-right: 8%;
-}
-@media (max-width: 1400px) {
-  body header #nav nav .search-login .search {
-    margin: 0px;
-  }
-}
-body header #nav nav .search-login .login {
-  width: 80px;
-  display: flex;
-  align-items: center;
-}
 body header #nav nav .search-login .login a {
+  width: 70px;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
 body header #nav nav .search-login .login a img {
-  height: 30px;
-}
-body header #nav nav .search-login .login:hover {
-  text-decoration: none;
-}
-@media (max-width: 1400px) {
-  body header #nav nav .search-login .login {
-    display: flex;
-    justify-content: center;
-  }
-}
-@media (max-width: 1400px) {
-  body header #nav {
-    padding: 0px 5%;
-  }
-}
-@media (max-width: 1086px) {
-  body header #nav {
-    padding: 0px 3%;
-  }
+  width: 32px;
 }
 body main .banner {
   position: relative;
@@ -608,6 +503,27 @@ body main .container-bot .community ul img {
   body main .container-bot {
     padding: 0px;
   }
+}
+body main .back {
+  width: 100%;
+  height: 30px;
+  position: -webkit-sticky;
+  position: sticky;
+  right: 20px;
+  bottom: 20px;
+}
+body main .back .buttom {
+  float: right;
+  margin-right: 20px;
+  width: 100px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  background-color: #616161;
+}
+body main .back .buttom a {
+  color: #000;
+  text-decoration: none;
 }
 body main .footer {
   width: 100%;
