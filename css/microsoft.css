@@ -9,7 +9,7 @@
 body header #nav {
   width: 100%;
   height: 60px;
-  padding: 0px 5%;
+  padding: 0px 8%;
 }
 body header #nav nav {
   display: flex;
@@ -34,30 +34,131 @@ body header #nav nav .logo .logo-picture:hover {
 body header #nav nav .logo .logo-picture:active {
   border: 1px dashed #000;
 }
-body header #nav nav .logo .connect li {
+body header #nav nav .logo .connect ul {
+  position: relative;
+}
+body header #nav nav .logo .connect ul li {
   float: left;
   line-height: 60px;
   font-size: 13px;
   padding: 0px 10px;
   border: 1px solid rgba(0, 0, 0, 0);
 }
-body header #nav nav .logo .connect li a {
+body header #nav nav .logo .connect ul li a {
   color: #000;
   text-decoration: none;
 }
-body header #nav nav .logo .connect li:hover {
+body header #nav nav .logo .connect ul li:hover {
   text-decoration: underline;
   text-decoration-thickness: 2px;
   text-underline-offset: 2px;
 }
-body header #nav nav .logo .connect li:active {
+body header #nav nav .logo .connect ul li:active {
   border: 1px dashed #000;
+}
+@media (max-width: 1086px) {
+  body header #nav nav .logo .connect ul .help {
+    display: none;
+  }
+}
+@media (max-width: 860px) {
+  body header #nav nav .logo .connect ul .help {
+    display: block;
+  }
+}
+@media (max-width: 1086px) {
+  body header #nav nav .logo .connect ul .xbox {
+    display: none;
+  }
+}
+@media (max-width: 860px) {
+  body header #nav nav .logo .connect ul .xbox {
+    display: block;
+  }
+}
+body header #nav nav .logo .connect ul #more {
+  display: none;
+}
+body header #nav nav .logo .connect ul #more:checked ~ ul {
+  display: block;
+}
+body header #nav nav .logo .connect ul #more:checked + label {
+  background-color: #f2f2f2;
+}
+body header #nav nav .logo .connect ul ul {
+  width: 170px;
+  position: absolute;
+  top: 60px;
+  right: -15px;
+  background-color: #f2f2f2;
+  box-shadow: 0px 6px 5px rgb(107, 107, 107);
+  border-bottom: 2px solid black;
+  z-index: 1;
+  display: none;
+}
+body header #nav nav .logo .connect ul ul li {
+  float: none;
+  line-height: 0;
+  padding: 18px 0px 18px 24px;
+}
+body header #nav nav .logo .connect ul ul li:hover {
+  cursor: pointer;
+}
+body header #nav nav .logo .connect ul .more {
+  display: none;
+}
+@media (max-width: 1086px) {
+  body header #nav nav .logo .connect ul .more {
+    display: block;
+  }
+}
+@media (max-width: 860px) {
+  body header #nav nav .logo .connect ul .more {
+    display: none;
+  }
 }
 body header #nav nav .search-login {
   width: 40%;
   display: flex;
   justify-content: end;
   font-size: 13px;
+  position: relative;
+}
+body header #nav nav .search-login input {
+  display: none;
+}
+body header #nav nav .search-login #check:checked + label {
+  background-color: #f2f2f2;
+}
+body header #nav nav .search-login #check:checked ~ ul {
+  display: flex;
+}
+body header #nav nav .search-login .all-list {
+  width: 1230px;
+  position: absolute;
+  top: 60px;
+  background-color: #f2f2f2;
+  z-index: 1;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  box-shadow: 0px 6px 5px rgb(107, 107, 107);
+  border-bottom: 3px solid black;
+  display: none;
+}
+body header #nav nav .search-login .all-list ul {
+  width: 16.6666666667%;
+}
+body header #nav nav .search-login .all-list ul li {
+  padding: 12px 0px 12px 24px;
+}
+body header #nav nav .search-login .all-list ul :first-child {
+  font-weight: bold;
+}
+body header #nav nav .search-login .all-list span {
+  width: 100%;
+  text-align: center;
+  padding: 12px 0px 12px 24px;
+  background-color: #e6e6e6;
 }
 body header #nav nav .search-login .link {
   line-height: 60px;
@@ -109,6 +210,16 @@ body header #nav nav .search-login .login:hover {
   body header #nav nav .search-login .login {
     display: flex;
     justify-content: center;
+  }
+}
+@media (max-width: 1400px) {
+  body header #nav {
+    padding: 0px 5%;
+  }
+}
+@media (max-width: 1086px) {
+  body header #nav {
+    padding: 0px 3%;
   }
 }
 body main .banner {
@@ -175,28 +286,29 @@ body main .banner .picture-word-shell .picture-word p {
     padding: 0px;
   }
 }
+@media (max-width: 1086px) {
+  body main .banner {
+    margin-bottom: 250px;
+  }
+}
+@media (max-width: 860px) {
+  body main .banner {
+    margin-bottom: 20px;
+  }
+}
 body main .carousel-button {
   width: 100%;
   height: 50px;
   background-color: bisque;
 }
-@media (max-width: 1086px) {
-  body main .carousel-button {
-    margin-bottom: 200px;
-  }
-}
-@media (max-width: 860px) {
-  body main .carousel-button {
-    display: none;
-  }
-}
 body main .container-top {
   padding-top: 50px;
   margin-bottom: 80px;
+  height: auto;
 }
 body main .container-top ul {
   width: 100%;
-  height: 100px;
+  height: auto;
   display: flex;
   justify-content: center;
   text-align: center;
@@ -219,11 +331,16 @@ body main .container-top ul li img {
 body main .container-top ul li a {
   color: #0067b8;
 }
+@media (max-width: 860px) {
+  body main .container-top {
+    margin-bottom: 0px;
+  }
+}
 body main .container-mid {
   display: flex;
   justify-content: center;
   padding: 0px 5%;
-  margin: 50px 0px;
+  margin: 0px 0px 50px;
 }
 body main .container-mid .outer-frame {
   display: flex;
@@ -547,10 +664,11 @@ body main .footer .statement {
   padding: 0px 5%;
   display: flex;
   justify-content: space-between;
-  padding-bottom: 20px;
+  flex-wrap: wrap;
 }
 body main .footer .statement .earth {
   font-size: 13px;
+  margin-bottom: 16px;
 }
 body main .footer .statement .earth a {
   color: #616161;
@@ -568,7 +686,8 @@ body main .footer .statement .microsoft-link ul {
   display: flex;
 }
 body main .footer .statement .microsoft-link ul li {
-  margin-right: 24px;
+  margin-right: 12px;
+  margin-bottom: 20px;
   font-size: 11px;
 }
 body main .footer .statement .microsoft-link ul li a {
@@ -585,7 +704,7 @@ body main .footer .statement .microsoft-link ul li a:hover {
 }
 @media (max-width: 1086px) {
   body main .footer .statement {
-    padding: 0px 24px 16px 24px;
+    padding: 0px 24px 0px 24px;
   }
 }
 @media (max-width: 540px) {
