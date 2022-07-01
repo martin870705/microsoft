@@ -697,12 +697,12 @@ body main .container-bot .community ul img {
 body main .back {
   width: 100%;
   height: 30px;
+}
+body main .back .buttom {
   position: -webkit-sticky;
   position: sticky;
   right: 20px;
   bottom: 20px;
-}
-body main .back .buttom {
   float: right;
   margin-right: 20px;
   width: 100px;

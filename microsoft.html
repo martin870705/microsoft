@@ -9,6 +9,7 @@
         integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="/css/microsoft.css">
     <title>Document</title>
     <style>
@@ -311,7 +312,7 @@
             </div>
 
         </div>
-        <!-- <div class="carousel-button"></div> -->
+        <div class="carousel-button"></div>
         <div class="container-top">
 
             <ul>
@@ -412,7 +413,7 @@
             </div>
         </div>
 
-
+        <div class="back">
         <div class="banner-2">
             <picture>
                 <source media="(max-width: 540px)" srcset="./image/banner-2-539x440.jpg">
@@ -513,14 +514,8 @@
                 </ul>
             </div>
         </div>
-        <div class="back">
-            <div class="buttom">
 
-                <a href="">
-                    回到頁首
-                </a>
-            </div>
-        </div>
+            
         <div class="footer">
             <div class="table">
 
@@ -614,9 +609,21 @@
                 </div>
             </div>
         </div>
+        <div class="buttom" data-aos="fade-zoom-in"
+            data-aos-easing="ease-in-back"
+            data-aos-delay="300"
+            data-aos-offset="0">
+
+                <a href="">
+                    回到頁首
+                </a>
+            </div>
+        </div>
     </main>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
+        // 輪播效果
         var swiper = new Swiper(".mySwiper", {
             slidesPerView: 1,
             spaceBetween: 30,
@@ -630,6 +637,8 @@
                 prevEl: ".swiper-button-prev",
             },
         });
+        // 滑入效果
+        AOS.init();
     </script>
 </body>
 
