@@ -8,8 +8,47 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
         integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="/css/microsoft.css">
     <title>Document</title>
+    <style>
+        
+        *:root {
+            --swiper-theme-color: black;
+            --swiper-navigation-size: 32px;
+        }
+
+        .swiper-button-next,
+        .swiper-button-prev,
+        .swiper-pagination {
+            position: static;
+        }
+
+        .swiper-button {
+            height: 35px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .swiper-button-next,
+        .swiper-button-prev {
+            margin-top: 0px;
+            color: #000;
+        }
+
+        .swiper-slide {
+            margin-bottom: 30px;
+        }
+
+        .swiper-horizontal>.swiper-pagination-bullets,
+        .swiper-pagination-bullets.swiper-pagination-horizontal,
+        .swiper-pagination-custom,
+        .swiper-pagination-fraction {
+            width: 15%;
+        }
+    </style>
 </head>
 
 <body>
@@ -21,11 +60,13 @@
                 </div>
 
                 <div class="search-login">
-                    <div class="link search"><a href=""><span>搜尋</span><i class="fa-solid fa-magnifying-glass fa-flip-horizontal"></i></a></div>
-                    <div class="link shop"><a href=""><span>購物車</span><i class="fa-solid fa-cart-shopping"></i></a></div>
+                    <div class="link search"><a href=""><span>搜尋</span><i
+                                class="fa-solid fa-magnifying-glass fa-flip-horizontal"></i></a></div>
+                    <div class="link shop"><a href=""><span>購物車</span><i class="fa-solid fa-cart-shopping"></i></a>
+                    </div>
                     <div class="link login"><a href=""><span>登入</span>
-                        <img src="./image/123154.svg" alt="">
-                    </a></div>
+                            <img src="./image/123154.svg" alt="">
+                        </a></div>
                 </div>
                 <label for="check">
                     <div class="all">所有Microsoft<i class="fa-solid fa-angle-down"></i></div>
@@ -34,69 +75,175 @@
                 <div class="hamburger">
                     <ul class="list">
 
-                        <a href=""><li class="365">Microsoft</li></a>
-                        <a href=""><li class="office">Office</li></a>
-                        <a href=""><li class="windos">Windos</li></a>
-                        <a href=""><li class="surface">Surface</li></a>
-                        <a href=""><li class="xbox">Xbox</li></a>
-                        <a href=""><li class="help">支援</li></a>
+                        <a href="">
+                            <li class="365">Microsoft</li>
+                        </a>
+                        <a href="">
+                            <li class="office">Office</li>
+                        </a>
+                        <a href="">
+                            <li class="windos">Windos</li>
+                        </a>
+                        <a href="">
+                            <li class="surface">Surface</li>
+                        </a>
+                        <a href="">
+                            <li class="xbox">Xbox</li>
+                        </a>
+                        <a href="">
+                            <li class="help">支援</li>
+                        </a>
                     </ul>
                     <ul class="all-list">
                         <ul>
-                            <li>軟體</li>
-                            <li><a href=""></a> Windows 應用程式</li>
-                            <li><a href=""></a> OneDrive</li>
-                            <li><a href=""></a> Outlook</li>
-                            <li><a href=""></a> Skype</li>
-                            <li><a href=""></a> OneNote</li>
-                            <li><a href=""></a> Microsoft Teams</li>
+                            <input type="checkbox" id="software">
+                            <label for="software">
+                                軟體
+                            </label>
+                            <ul>
+                                
+                                <a href="">
+                                    <li>Windows 應用程式</li>
+                                </a>
+                                <a href="">
+                                    <li>OneDrive</li>
+                                </a>
+                                <a href="">
+                                    <li>Outlook</li>
+                                </a>
+                                <a href="">
+                                    <li>Skype</li>
+                                </a>
+                                <a href="">
+                                    <li>OneNote</li>
+                                </a>
+                                <a href="">
+                                    <li>Microsoft Teams</li>
+                                </a>
+                            </ul>
+
 
                         </ul>
                         <ul>
-                            <li>個人電腦和設備</li>
+                            <input type="checkbox" id="equipment">
+                            <label for="equipment">
+                                <li>個人電腦和設備</li>
+                            </label>
+                            <a href="">
+                                <li>選購 Xbox</li>
+                            </a>
+                            <a href="">
+                                <li>電腦配件</li>
+                            </a>
+                        </ul>
+                        <ul>
+                            <input type="checkbox" id="play">
+                            <label for="play">
+                                <li>娛樂</li>
+                            </label>
 
-                            <li>選購 Xbox</li>
-                            <li>電腦配件</li>
+                            <a href="">
+                                <li>Xbox Game Pass Ultimate</li>
+                            </a>
+                            <a href="">
+                                <li>Xbox Live Gold</li>
+                            </a>
+                            <a href="">
+                                <li>Xbox 與遊戲</li>
+                            </a>
+                            <a href="">
+                                <li>電腦遊戲</li>
+                            </a>
+                            <a href="">
+                                <li>Windows 遊戲</li>
+                            </a>
                         </ul>
                         <ul>
-                            <li>娛樂</li>
-                            <li>Xbox Game Pass Ultimate</li>
-                            <li>Xbox Live Gold</li>
-                            <li>Xbox 與遊戲</li>
-                            <li>電腦遊戲</li>
-                            <li>Windows 遊戲</li>
+                            <input type="checkbox" id="Business-application">
+                            <label for="Business-application">
+                                <li>商務適用</li>
+                            </label>
+
+                            <a href="">
+                                <li>Microsoft Cloud</li>
+                            </a>
+                            <a href="">
+                                <li>Microsoft 安全性</li>
+                            </a>
+                            <a href="">
+                                <li>Azure</li>
+                            </a>
+                            <a href="">
+                                <li>Dynamics 365</li>
+                            </a>
+                            <a href="">
+                                <li>商務用 Microsoft 365</li>
+                            </a>
+                            <a href="">
+                                <li>Microsoft 產業</li>
+                            </a>
+                            <a href="">
+                                <li>Microsoft Power Platform</li>
+                            </a>
+                            <a href="">
+                                <li>Windows 365</li>
+                            </a>
                         </ul>
                         <ul>
-                            <li>商務適用</li>
-                            <li>Microsoft Cloud</li>
-                            <li>Microsoft 安全性</li>
-                            <li>Azure</li>
-                            <li>Dynamics 365</li>
-                            <li>商務用 Microsoft 365</li>
-                            <li>Microsoft 產業</li>
-                            <li>Microsoft Power Platform</li>
-                            <li>Windows 365</li>
+                            <input type="checkbox" id="Developer">
+                            <label for="Developer">
+                                <li>開發人員與 IT</li>
+                            </label>
+
+                            <a href="">
+                                <li>開發人員中心</li>
+                            </a>
+                            <a href="">
+                                <li>文件</li>
+                            </a>
+                            <a href="">
+                                <li>Microsoft Learn</li>
+                            </a>
+                            <a href="">
+                                <li>Microsoft 技術社群</li>
+                            </a>
+                            <a href="">
+                                <li>Azure Marketplace</li>
+                            </a>
+                            <a href="">
+                                <li>AppSource</li>
+                            </a>
+                            <a href="">
+                                <li>Visual Studio</li>
+                            </a>
                         </ul>
                         <ul>
-                            <li>開發人員與 IT</li>
-                            <li>開發人員中心</li>
-                            <li>文件</li>
-                            <li>Microsoft Learn</li>
-                            <li>Microsoft 技術社群</li>
-                            <li>Azure Marketplace</li>
-                            <li>AppSource</li>
-                            <li>Visual Studio</li>
-                        </ul>
-                        <ul>
-                            <li>其他</li>
-                            <li>Microsoft Rewards</li>
-                            <li>免費下載與安全性</li>
-                            <li>教育</li>
-                            <li>禮品卡</li>
-                            <li>Licensing</li>
+                            <input type="checkbox" id="other">
+                            <label for="other">
+                                <li>其他</li>
+                            </label>
+
+                            <a href="">
+                                <li>Microsoft Rewards</li>
+                            </a>
+                            <a href="">
+                                <li>免費下載與安全性</li>
+                            </a>
+                            <a href="">
+                                <li>教育</li>
+                            </a>
+                            <a href="">
+                                <li>禮品卡</li>
+                            </a>
+                            <a href="">
+                                <li>Licensing</li>
+                            </a>
                         </ul>
 
-                        <span>檢視網站地圖</span>
+                        <a href="">
+
+                            檢視網站地圖
+                        </a>
 
                     </ul>
 
@@ -107,23 +254,55 @@
     </header>
     <main>
         <div class="banner">
-            <picture>
-                <source media="(max-width: 540px)" srcset="./image/banner-539x440.jfif">
-                <source media="(max-width: 860px)" srcset="./image/banner-859x540.jfif">
-                <source media="(max-width: 1086px)" srcset="./image/banner-1083x600.jfif">
-                <source media="(max-width: 1400px)" srcset="./image/banner-1399x600.jfif">
-                <img src="./image/banner-1920.jpg">
-            </picture>
-            <div class="picture-word-shell">
-                <div class="picture-word">
-                    <div class="news-release">新上市</div>
-                    <h1>Surface Laptop Go 2</h1>
-                    <div class="describe">外型時尚的筆記型電腦配備 12.4 吋觸控螢幕、絕佳的打字體驗，以及改良的 HD 相機</div>
-                    <p>深入了解</p>
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <picture>
+                            <source media="(max-width: 540px)" srcset="./image/banner-539x440.jfif">
+                            <source media="(max-width: 860px)" srcset="./image/banner-859x540.jfif">
+                            <source media="(max-width: 1086px)" srcset="./image/banner-1083x600.jfif">
+                            <source media="(max-width: 1400px)" srcset="./image/banner-1399x600.jfif">
+                            <img src="./image/banner-1920.jpg">
+                        </picture>
+                        <div class="picture-word-shell">
+                            <div class="picture-word">
+                                <div class="news-release">新上市</div>
+                                <h1>Surface Laptop Go 2</h1>
+                                <div class="describe">外型時尚的筆記型電腦配備 12.4 吋觸控螢幕、絕佳的打字體驗，以及改良的 HD 相機</div>
+                                <p>深入了解</p>
+                            </div>
+                        </div>
+                        <div class="box"></div>
+                    </div>
+                    <div class="swiper-slide">
+                        <picture>
+                            <source media="(max-width: 540px)" srcset="./image/banner(2)VP5-539x440.jfif">
+                            <source media="(max-width: 860px)" srcset="./image/banner(2)VP4-1399x600.jfif">
+                            <source media="(max-width: 1086px)" srcset="./image/banner(2)VP4-1399x600.jfif">
+                            <source media="(max-width: 1400px)" srcset="./image/banner(2)VP3-1399x600.jfif">
+                            <img src="./image/banner(2)VP2-539x440.jfif">
+                        </picture>
+                        <div class="picture-word-shell">
+                            <div class="picture-word">
+                                <div class="news-release">新上市</div>
+                                <h1>Surface Laptop Go 2</h1>
+                                <div class="describe">外型時尚的筆記型電腦配備 12.4 吋觸控螢幕、絕佳的打字體驗，以及改良的 HD 相機</div>
+                                <p>深入了解</p>
+                            </div>
+                        </div>
+                        <div class="box"></div>
+                    </div>
+                </div>
+                <div class="swiper-button">
+
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-next"></div>
                 </div>
             </div>
+
         </div>
-        <div class="carousel-button"></div>
+        <!-- <div class="carousel-button"></div> -->
         <div class="container-top">
 
             <ul>
@@ -330,7 +509,7 @@
 
                 <a href="">
                     回到頁首
-                </a> 
+                </a>
             </div>
         </div>
         <div class="footer">
@@ -427,6 +606,27 @@
             </div>
         </div>
     </main>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            loop: true,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+    </script>
 </body>
 
 </html>
+<!-- https://michalsnik.github.io/aos/
+teacher sunyeh下午3:58
+https://ithelp.ithome.com.tw/articles/10272404
+teacher sunyeh下午4:59
+https://www.youtube.com/channel/UCguZS-y7codLSt6vpkVdnKg -->

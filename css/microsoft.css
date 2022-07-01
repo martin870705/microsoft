@@ -30,15 +30,32 @@ body header #nav nav .logo:hover {
 body header #nav nav .logo:active {
   border: 1px dashed #000;
 }
+@media (max-width: 860px) {
+  body header #nav nav .logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
 body header #nav nav label {
   float: right;
   line-height: 60px;
+}
+@media (max-width: 860px) {
+  body header #nav nav label {
+    float: left;
+  }
 }
 body header #nav nav input {
   display: none;
 }
 body header #nav nav #check:checked + div > .all-list {
   display: flex;
+}
+@media (max-width: 860px) {
+  body header #nav nav #check:checked + div {
+    display: block;
+  }
 }
 body header #nav nav .hamburger {
   float: right;
@@ -65,28 +82,82 @@ body header #nav nav .hamburger .list a:hover {
 body header #nav nav .hamburger .list a:active {
   border: 1px dashed #000;
 }
+@media (max-width: 860px) {
+  body header #nav nav .hamburger .list a {
+    position: static;
+    display: block;
+    height: auto;
+    line-height: normal;
+    padding: 14px 24px 15px 15px;
+  }
+}
+@media (max-width: 860px) {
+  body header #nav nav .hamburger .list {
+    position: static;
+    display: block;
+    background-color: #f2f2f2;
+  }
+}
 body header #nav nav .hamburger .all-list {
   width: 1230px;
   position: absolute;
   top: 60px;
-  right: 0px;
+  right: 10%;
   display: flex;
   flex-wrap: wrap;
-  z-index: 1;
+  z-index: 2;
   background-color: #f2f2f2;
   display: none;
+  box-shadow: 0px 4px 5px black;
 }
 body header #nav nav .hamburger .all-list ul {
   width: 205px;
 }
+body header #nav nav .hamburger .all-list ul a {
+  color: #000;
+  text-decoration: none;
+}
 body header #nav nav .hamburger .all-list ul li {
   padding: 12px 0px 12px 24px;
 }
-body header #nav nav .hamburger .all-list ul li:first-child {
-  font-weight: bold;
-}
-body header #nav nav .hamburger .all-list span {
+body header #nav nav .hamburger .all-list ul label {
+  padding: 12px 0px 12px 24px;
+  line-height: normal;
   width: 100%;
+}
+body header #nav nav .hamburger .all-list ul label li {
+  font-weight: bold;
+  display: block;
+}
+@media (max-width: 860px) {
+  body header #nav nav .hamburger .all-list ul {
+    width: 100%;
+  }
+}
+body header #nav nav .hamburger .all-list > a {
+  width: 100%;
+  text-align: center;
+  padding: 12px 0px;
+  color: #000;
+  text-decoration: none;
+}
+@media (max-width: 860px) {
+  body header #nav nav .hamburger .all-list {
+    width: 100%;
+    position: static;
+    display: block;
+    padding: 0px;
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+  }
+}
+@media (max-width: 860px) {
+  body header #nav nav .hamburger {
+    position: absolute;
+    top: 60px;
+    z-index: 2;
+    width: 100%;
+    display: none;
+  }
 }
 body header #nav nav .search-login {
   float: right;
@@ -110,12 +181,56 @@ body header #nav nav .search-login .link a:hover {
 body header #nav nav .search-login .link:active {
   border: 1px dashed #000;
 }
+@media (max-width: 860px) {
+  body header #nav nav .search-login .search {
+    flex-grow: 1;
+  }
+}
+@media (max-width: 860px) {
+  body header #nav nav .search-login .shop {
+    float: right;
+  }
+}
 body header #nav nav .search-login .login a {
   width: 70px;
+  height: 60px;
   display: flex;
 }
 body header #nav nav .search-login .login a img {
   width: 32px;
+}
+@media (max-width: 1400px) {
+  body header #nav nav .search-login .login a {
+    width: 32px;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media (max-width: 860px) {
+  body header #nav nav .search-login .login a {
+    float: right;
+  }
+}
+@media (max-width: 1400px) {
+  body header #nav nav .search-login span {
+    display: none;
+  }
+}
+@media (max-width: 860px) {
+  body header #nav nav .search-login {
+    display: flex;
+    width: 82%;
+  }
+}
+@media (max-width: 1086px) {
+  body header #nav nav {
+    padding: 0px 3%;
+  }
+}
+@media (max-width: 860px) {
+  body header #nav nav {
+    padding: 0%;
+  }
 }
 body main .banner {
   position: relative;
@@ -170,7 +285,7 @@ body main .banner .picture-word-shell .picture-word p {
 @media (max-width: 1086px) {
   body main .banner .picture-word-shell {
     position: absolute;
-    top: 90%;
+    top: 60%;
     padding: 0px 12px;
     width: 100%;
   }
@@ -181,9 +296,19 @@ body main .banner .picture-word-shell .picture-word p {
     padding: 0px;
   }
 }
+body main .banner .box {
+  width: 100%;
+  height: 282px;
+  display: none;
+}
 @media (max-width: 1086px) {
-  body main .banner {
-    margin-bottom: 250px;
+  body main .banner .box {
+    display: block;
+  }
+}
+@media (max-width: 860px) {
+  body main .banner .box {
+    display: none;
   }
 }
 @media (max-width: 860px) {
