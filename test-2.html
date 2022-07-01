@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+            
+        }
+        a{
+            text-decoration: none;
+        }
+        li{
+            list-style-type: none;
+        }
+        /* .all-list{
+            width: 100%;
+            display: flex;
+        } */
+        .all-list>ul{
+            width: calc(100% / 6);
+        }
+        .all-list ul input{
+            display: none;
+        }
+        .all-list ul label li{
+            /* width: 100%; */
+            padding: 12px 0px 12px 24px;
+            font-weight: bold;
+        }
+        .all-list ul ul a li{
+            padding: 12px 0px 12px 24px;
+        }
+        .all-list ul ul{
+            display: none;
+        }
+        .all-list ul input:checked+ul{
+            display: block;
+        }
+
+    </style>
+</head>
+<body>
+    <ul class="all-list">
+        <ul>
+            <label for="software">
+                <li>軟體</li>
+            </label>
+            <input type="checkbox" id="software">
+            <ul>
+                <a href="">
+                    <li>Windows 應用程式</li>
+                </a>
+                <a href="">
+                    <li>OneDrive</li>
+                </a>
+                <a href="">
+                    <li>Outlook</li>
+                </a>
+                <a href="">
+                    <li>Skype</li>
+                </a>
+                <a href="">
+                    <li>OneNote</li>
+                </a>
+                <a href="">
+                    <li>Microsoft Teams</li>
+                </a>
+            </ul>
+
+
+        </ul>
+        <ul>
+            <label for="equipment">
+                <li>個人電腦和設備</li>
+            </label>
+            
+            <input type="checkbox" id="equipment">
+            <ul>
+                <a href="">
+                    <li>選購 Xbox</li>
+                </a>
+                <a href="">
+                    <li>電腦配件</li>
+                </a>
+            </ul>
+        </ul>
+        <ul>
+            <label for="play">
+                <li>娛樂</li>
+            </label>
+            <input type="checkbox" id="play">
+            <ul>
+
+                <a href="">
+                    <li>Xbox Game Pass Ultimate</li>
+                </a>
+                <a href="">
+                    <li>Xbox Live Gold</li>
+                </a>
+                <a href="">
+                    <li>Xbox 與遊戲</li>
+                </a>
+                <a href="">
+                    <li>電腦遊戲</li>
+                </a>
+                <a href="">
+                    <li>Windows 遊戲</li>
+                </a>
+            </ul>
+        </ul>
+        <ul>
+            <label for="Business-application">
+                <li>商務適用</li>
+            </label>
+            <input type="checkbox" id="Business-application">
+            <ul>
+
+                <a href="">
+                    <li>Microsoft Cloud</li>
+                </a>
+                <a href="">
+                    <li>Microsoft 安全性</li>
+                </a>
+                <a href="">
+                    <li>Azure</li>
+                </a>
+                <a href="">
+                    <li>Dynamics 365</li>
+                </a>
+                <a href="">
+                    <li>商務用 Microsoft 365</li>
+                </a>
+                <a href="">
+                    <li>Microsoft 產業</li>
+                </a>
+                <a href="">
+                    <li>Microsoft Power Platform</li>
+                </a>
+                <a href="">
+                    <li>Windows 365</li>
+                </a>
+            </ul>
+        </ul>
+        <ul>
+            <label for="Developer">
+                <li>開發人員與 IT</li>
+            </label>
+            <input type="checkbox" id="Developer">
+            <ul>
+
+                <a href="">
+                    <li>開發人員中心</li>
+                </a>
+                <a href="">
+                    <li>文件</li>
+                </a>
+                <a href="">
+                    <li>Microsoft Learn</li>
+                </a>
+                <a href="">
+                    <li>Microsoft 技術社群</li>
+                </a>
+                <a href="">
+                    <li>Azure Marketplace</li>
+                </a>
+                <a href="">
+                    <li>AppSource</li>
+                </a>
+                <a href="">
+                    <li>Visual Studio</li>
+                </a>
+            </ul>
+        </ul>
+        <ul>
+            <label for="other">
+                <li>其他</li>
+            </label>
+            <input type="checkbox" id="other">
+            <ul>
+
+                <a href="">
+                    <li>Microsoft Rewards</li>
+                </a>
+                <a href="">
+                    <li>免費下載與安全性</li>
+                </a>
+                <a href="">
+                    <li>教育</li>
+                </a>
+                <a href="">
+                    <li>禮品卡</li>
+                </a>
+                <a href="">
+                    <li>Licensing</li>
+                </a>
+            </ul>
+        </ul>
+
+</body>
+</html>

@@ -39,7 +39,7 @@
             height: 40px;
         }
 
-        .hamburger .more-link {
+        .hamburger .all-list {
             display: flex;
             position: absolute;
             top: 60px;
@@ -66,11 +66,11 @@
             display: none;
         }
 
-        .hamburger .more-link {
+        .hamburger .all-list {
             display: none;
         }
 
-        #check:checked+div>.more-link {
+        #check:checked+div>.all-list {
             display: flex;
         }
 
@@ -103,7 +103,7 @@
                 /* display: none; */
             }
 
-            .hamburger .more-link {
+            .hamburger .all-list {
                 display: block;
                 position: static;
                 
@@ -111,7 +111,7 @@
             #check:checked+div{
             display: block;
         }
-        #check:checked+div>.more-link {
+        #check:checked+div>.all-list {
             display: block;
         }
         }
@@ -158,63 +158,156 @@
                             <li>支援</li>
                         </a>
                     </ul>
-                    <ul class="more-link">
+                    <ul class="all-list">
                         <ul>
-                            <li>軟體</li>
-                            <li><a href=""></a> Windows 應用程式</li>
-                            <li><a href=""></a> OneDrive</li>
-                            <li><a href=""></a> Outlook</li>
-                            <li><a href=""></a> Skype</li>
-                            <li><a href=""></a> OneNote</li>
-                            <li><a href=""></a> Microsoft Teams</li>
+                            <input type="checkbox" id="software">
+                            <label for="software">
+                                軟體
+                            </label>
+                            <ul>
+                                
+                                <a href="">
+                                    <li>Windows 應用程式</li>
+                                </a>
+                                <a href="">
+                                    <li>OneDrive</li>
+                                </a>
+                                <a href="">
+                                    <li>Outlook</li>
+                                </a>
+                                <a href="">
+                                    <li>Skype</li>
+                                </a>
+                                <a href="">
+                                    <li>OneNote</li>
+                                </a>
+                                <a href="">
+                                    <li>Microsoft Teams</li>
+                                </a>
+                            </ul>
+
 
                         </ul>
                         <ul>
-                            <li>個人電腦和設備</li>
+                            <input type="checkbox" id="equipment">
+                            <label for="equipment">
+                                <li>個人電腦和設備</li>
+                            </label>
+                            <a href="">
+                                <li>選購 Xbox</li>
+                            </a>
+                            <a href="">
+                                <li>電腦配件</li>
+                            </a>
+                        </ul>
+                        <ul>
+                            <input type="checkbox" id="play">
+                            <label for="play">
+                                <li>娛樂</li>
+                            </label>
 
-                            <li>選購 Xbox</li>
-                            <li>電腦配件</li>
+                            <a href="">
+                                <li>Xbox Game Pass Ultimate</li>
+                            </a>
+                            <a href="">
+                                <li>Xbox Live Gold</li>
+                            </a>
+                            <a href="">
+                                <li>Xbox 與遊戲</li>
+                            </a>
+                            <a href="">
+                                <li>電腦遊戲</li>
+                            </a>
+                            <a href="">
+                                <li>Windows 遊戲</li>
+                            </a>
                         </ul>
                         <ul>
-                            <li>娛樂</li>
-                            <li>Xbox Game Pass Ultimate</li>
-                            <li>Xbox Live Gold</li>
-                            <li>Xbox 與遊戲</li>
-                            <li>電腦遊戲</li>
-                            <li>Windows 遊戲</li>
-                        </ul>
-                        <ul>
-                            <li>商務適用</li>
-                            <li>Microsoft Cloud</li>
-                            <li>Microsoft 安全性</li>
-                            <li>Azure</li>
-                            <li>Dynamics 365</li>
-                            <li>商務用 Microsoft 365</li>
-                            <li>Microsoft 產業</li>
-                            <li>Microsoft Power Platform</li>
-                            <li>Windows 365</li>
-                        </ul>
-                        <ul>
-                            <li>開發人員與 IT</li>
-                            <li>開發人員中心</li>
-                            <li>文件</li>
-                            <li>Microsoft Learn</li>
-                            <li>Microsoft 技術社群</li>
-                            <li>Azure Marketplace</li>
-                            <li>AppSource</li>
-                            <li>Visual Studio</li>
-                        </ul>
-                        <ul>
-                            <li>其他</li>
-                            <li>Microsoft Rewards</li>
-                            <li>免費下載與安全性</li>
-                            <li>教育</li>
-                            <li>禮品卡</li>
-                            <li>Licensing</li>
-                        </ul>
+                            <input type="checkbox" id="Business-application">
+                            <label for="Business-application">
+                                <li>商務適用</li>
+                            </label>
 
-                        <span>檢視網站地圖</span>
+                            <a href="">
+                                <li>Microsoft Cloud</li>
+                            </a>
+                            <a href="">
+                                <li>Microsoft 安全性</li>
+                            </a>
+                            <a href="">
+                                <li>Azure</li>
+                            </a>
+                            <a href="">
+                                <li>Dynamics 365</li>
+                            </a>
+                            <a href="">
+                                <li>商務用 Microsoft 365</li>
+                            </a>
+                            <a href="">
+                                <li>Microsoft 產業</li>
+                            </a>
+                            <a href="">
+                                <li>Microsoft Power Platform</li>
+                            </a>
+                            <a href="">
+                                <li>Windows 365</li>
+                            </a>
+                        </ul>
+                        <ul>
+                            <input type="checkbox" id="Developer">
+                            <label for="Developer">
+                                <li>開發人員與 IT</li>
+                            </label>
+
+                            <a href="">
+                                <li>開發人員中心</li>
+                            </a>
+                            <a href="">
+                                <li>文件</li>
+                            </a>
+                            <a href="">
+                                <li>Microsoft Learn</li>
+                            </a>
+                            <a href="">
+                                <li>Microsoft 技術社群</li>
+                            </a>
+                            <a href="">
+                                <li>Azure Marketplace</li>
+                            </a>
+                            <a href="">
+                                <li>AppSource</li>
+                            </a>
+                            <a href="">
+                                <li>Visual Studio</li>
+                            </a>
+                        </ul>
+                        <ul>
+                            <input type="checkbox" id="other">
+                            <label for="other">
+                                <li>其他</li>
+                            </label>
+
+                            <a href="">
+                                <li>Microsoft Rewards</li>
+                            </a>
+                            <a href="">
+                                <li>免費下載與安全性</li>
+                            </a>
+                            <a href="">
+                                <li>教育</li>
+                            </a>
+                            <a href="">
+                                <li>禮品卡</li>
+                            </a>
+                            <a href="">
+                                <li>Licensing</li>
+                            </a>
+                        </ul>
                     </ul>
+                        <a href="">
+
+                            檢視網站地圖
+                        </a>
                 </div>
 
             </nav>
@@ -227,205 +320,3 @@
 </html>
 
 
-#nav {
-    width: 100%;
-    height: 60px;
-    
-
-    nav {
-        width: 100%;
-        height: 60px;
-        background-color: aqua;
-        padding: 0px 8%;
-
-        .logo {
-            float: left;
-            padding-top: 15px;
-            border: 1px solid rgba($color: #000000, $alpha: 0);
-
-            img {
-                width: 120px;
-            }
-
-            &:hover {
-                cursor: pointer;
-            }
-
-            &:active {
-                border: 1px dashed #000;
-            }
-
-
-        }
-
-        .hamburger {
-
-            .list{
-            
-
-                li {
-                    
-                    line-height: 60px;
-                    font-size: 13px;
-                    padding: 0px 10px;
-                    border: 1px solid rgba($color: #000000, $alpha: 0);
-
-                    a {
-                        color: #000;
-                        text-decoration: none;
-
-                    }
-
-                    &:hover {
-                        text-decoration: underline;
-                        text-decoration-thickness: 2px;
-                        text-underline-offset: 2px;
-
-                    }
-
-                    &:active {
-                        border: 1px dashed #000;
-                    }
-
-
-                }
-
-                .help {
-                    @media (max-width:1086px) {
-                        display: none;
-                    }
-
-                    @media (max-width:860px) {
-                        display: block;
-                    }
-                }
-
-                .xbox {
-                    @media (max-width:1086px) {
-                        display: none;
-                    }
-
-                    @media (max-width:860px) {
-                        display: block;
-                    }
-                }
-
-                
-
-                
-
-                .more {
-                    display: none;
-
-
-                    @media (max-width:1086px) {
-                        display: block;
-                    }
-
-                    @media (max-width:860px) {
-                        display: none;
-                    }
-                }
-
-            }
-
-
-
-
-        }
-
-
-
-
-
-
-        .search-login {
-            float: right;
-            display: flex;           
-            font-size: 13px;
-
-            .link {
-                line-height: 60px;
-                padding: 0px 10px;
-                border: 1px solid rgba($color: #000000, $alpha: 0);
-
-                a {
-                    color: #000;
-                    text-decoration: none;
-
-                    span {
-
-                        @media (max-width:1400px) {
-                            display: none;
-                        }
-                    }
-
-                }
-
-                &:hover {
-                    text-decoration: underline;
-                    text-decoration-thickness: 2px;
-                    text-underline-offset: 5px;
-
-                }
-
-                &:active {
-                    border: 1px dashed #000;
-                }
-            }
-
-            .search {
-                margin-right: 8%;
-
-                @media (max-width:1400px) {
-                    margin: 0px;
-                }
-            }
-
-
-            .login {
-                width: 80px;
-                display: flex;
-                align-items: center;
-
-                a {
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: center;
-
-
-                    img {
-                        height: 30px;
-
-                    }
-                }
-
-
-                &:hover {
-                    text-decoration: none;
-                }
-
-                @media (max-width:1400px) {
-                    display: flex;
-                    justify-content: center;
-                }
-            }
-
-
-        }
-
-        // @media (max-width:860px) {
-        //     display: block;
-        // }
-    }
-
-    @media (max-width:1400px) {
-        padding: 0px 5%;
-    }
-
-    @media (max-width:1086px) {
-        padding: 0px 3%;
-    }
-
-}
-}

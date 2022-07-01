@@ -40,6 +40,7 @@ body header #nav nav .logo:active {
 body header #nav nav label {
   float: right;
   line-height: 60px;
+  font-size: 13px;
 }
 @media (max-width: 860px) {
   body header #nav nav label {
@@ -89,6 +90,8 @@ body header #nav nav .hamburger .list a:active {
     height: auto;
     line-height: normal;
     padding: 14px 24px 15px 15px;
+    margin: 1px;
+    border-bottom: 1px solid #e6e6e6;
   }
 }
 @media (max-width: 860px) {
@@ -99,7 +102,7 @@ body header #nav nav .hamburger .list a:active {
   }
 }
 body header #nav nav .hamburger .all-list {
-  width: 1230px;
+  width: 80%;
   position: absolute;
   top: 60px;
   right: 10%;
@@ -113,21 +116,70 @@ body header #nav nav .hamburger .all-list {
 body header #nav nav .hamburger .all-list ul {
   width: 205px;
 }
-body header #nav nav .hamburger .all-list ul a {
+body header #nav nav .hamburger .all-list ul label {
+  line-height: normal;
+  width: 100%;
+  float: none;
+}
+body header #nav nav .hamburger .all-list ul label li {
+  font-size: 13px;
+  padding: 12px 0px 12px 24px;
+  font-weight: bold;
+  display: block;
+}
+@media (max-width: 860px) {
+  body header #nav nav .hamburger .all-list ul label li {
+    font-weight: lighter;
+    padding: 14px 15px 15px;
+    margin: 1px;
+    border: 1px solid rgba(0, 0, 0, 0);
+    border-bottom: 1px solid #e6e6e6;
+  }
+}
+@media (max-width: 860px) {
+  body header #nav nav .hamburger .all-list ul label li:active {
+    border: 1px dashed #000;
+  }
+}
+body header #nav nav .hamburger .all-list ul label i {
+  display: none;
+}
+@media (max-width: 860px) {
+  body header #nav nav .hamburger .all-list ul label i {
+    display: block;
+    float: right;
+  }
+}
+body header #nav nav .hamburger .all-list ul input:checked + ul {
+  display: block;
+}
+body header #nav nav .hamburger .all-list ul ul a {
   color: #000;
   text-decoration: none;
 }
-body header #nav nav .hamburger .all-list ul li {
+body header #nav nav .hamburger .all-list ul ul a li {
   padding: 12px 0px 12px 24px;
+  font-size: 13px;
+  border: 1px solid rgba(0, 0, 0, 0);
 }
-body header #nav nav .hamburger .all-list ul label {
-  padding: 12px 0px 12px 24px;
-  line-height: normal;
-  width: 100%;
+body header #nav nav .hamburger .all-list ul ul a li:active {
+  border: 1px dashed #000;
 }
-body header #nav nav .hamburger .all-list ul label li {
-  font-weight: bold;
-  display: block;
+@media (max-width: 860px) {
+  body header #nav nav .hamburger .all-list ul ul a li {
+    padding: 14px 15px 15px;
+    margin: 1px;
+    border-bottom: 1px solid #e6e6e6;
+  }
+}
+body header #nav nav .hamburger .all-list ul ul a:hover {
+  text-decoration: underline;
+}
+@media (max-width: 860px) {
+  body header #nav nav .hamburger .all-list ul ul {
+    padding: 1px 0px 0px 30px;
+    display: none;
+  }
 }
 @media (max-width: 860px) {
   body header #nav nav .hamburger .all-list ul {
@@ -142,12 +194,23 @@ body header #nav nav .hamburger .all-list > a {
   text-decoration: none;
 }
 @media (max-width: 860px) {
+  body header #nav nav .hamburger .all-list > a {
+    text-align: start;
+    font-size: 13px;
+    padding: 14px 15px 15px;
+    margin: 1px;
+    border: 1px solid rgba(0, 0, 0, 0);
+    border-bottom: 1px solid #e6e6e6;
+  }
+}
+@media (max-width: 860px) {
   body header #nav nav .hamburger .all-list {
     width: 100%;
     position: static;
     display: block;
     padding: 0px;
     box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+    border-bottom: #000 solid 1px;
   }
 }
 @media (max-width: 860px) {
@@ -157,12 +220,14 @@ body header #nav nav .hamburger .all-list > a {
     z-index: 2;
     width: 100%;
     display: none;
+    background-color: #f2f2f2;
   }
 }
 body header #nav nav .search-login {
   float: right;
   display: flex;
   line-height: 60px;
+  font-size: 16px;
 }
 body header #nav nav .search-login .link {
   height: 55px;
