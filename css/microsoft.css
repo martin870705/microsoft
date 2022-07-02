@@ -43,6 +43,21 @@ body header #nav nav label {
   font-size: 13px;
 }
 @media (max-width: 860px) {
+  body header #nav nav label .all span {
+    display: none;
+  }
+}
+body header #nav nav label .all .menu {
+  display: none;
+}
+@media (max-width: 860px) {
+  body header #nav nav label .all .menu {
+    display: block;
+    font-size: 30px;
+    margin-left: 10px;
+  }
+}
+@media (max-width: 860px) {
   body header #nav nav label {
     float: left;
   }
@@ -284,7 +299,7 @@ body header #nav nav .search-login .login a img {
 @media (max-width: 860px) {
   body header #nav nav .search-login {
     display: flex;
-    width: 82%;
+    width: 90%;
   }
 }
 @media (max-width: 1086px) {
@@ -415,6 +430,7 @@ body main .container-top ul li img {
 }
 body main .container-top ul li a {
   color: #0067b8;
+  font-weight: bold;
 }
 @media (max-width: 860px) {
   body main .container-top {
@@ -460,6 +476,7 @@ body main .container-mid .outer-frame .commodity .link-group a {
   color: #0067b8;
   text-decoration: none;
   margin: 16px 24px 16px 0px;
+  font-weight: bold;
   display: block;
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -641,6 +658,7 @@ body main .container-bot .information .card .word a {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  font-weight: bold;
 }
 body main .container-bot .information .card .word a:hover {
   text-decoration: underline;
@@ -696,7 +714,6 @@ body main .container-bot .community ul img {
 }
 body main .back {
   width: 100%;
-  height: 30px;
 }
 body main .back .buttom {
   position: -webkit-sticky;
@@ -704,7 +721,6 @@ body main .back .buttom {
   right: 20px;
   bottom: 20px;
   float: right;
-  margin-right: 20px;
   width: 100px;
   height: 30px;
   text-align: center;
@@ -714,6 +730,21 @@ body main .back .buttom {
 body main .back .buttom a {
   color: #000;
   text-decoration: none;
+}
+@media (max-width: 540px) {
+  body main .back .buttom {
+    width: 100%;
+    position: static;
+  }
+}
+@media (max-width: 540px) {
+  body main .back {
+    padding: 0px 12px;
+  }
+}
+body main .back-box {
+  width: 100%;
+  height: 60px;
 }
 body main .footer {
   width: 100%;

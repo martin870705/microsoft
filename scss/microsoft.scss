@@ -54,6 +54,25 @@ body {
                     line-height: 60px;
                     font-size: 13px;
 
+                    // display: none;
+                    .all {
+                        span {
+                            @media(max-width:860px) {
+                                display: none;
+                            }
+                        }
+
+                        .menu {
+                            display: none;
+
+                            @media(max-width:860px) {
+                                display: block;
+                                font-size: 30px;
+                                margin-left: 10px;
+                            }
+                        }
+                    }
+
                     @media(max-width:860px) {
                         float: left;
                     }
@@ -142,7 +161,7 @@ body {
                                 line-height: normal;
                                 width: 100%;
                                 float: none;
-                                
+
 
                                 li {
                                     font-size: 13px;
@@ -154,26 +173,30 @@ body {
                                         font-weight: lighter;
                                         padding: 14px 15px 15px;
                                         margin: 1px;
-                                        border:1px solid rgba($color: #000000, $alpha: 0);
+                                        border: 1px solid rgba($color: #000000, $alpha: 0);
                                         border-bottom: 1px solid #e6e6e6;
                                     }
                                 }
-                                    @media(max-width:860px) {
+
+                                @media(max-width:860px) {
                                     li:active {
                                         border: 1px dashed #000;
                                     }
                                 }
-                                i{
+
+                                i {
                                     display: none;
+
                                     @media(max-width:860px) {
                                         display: block;
                                         float: right;
-                                        }
+                                    }
                                 }
-                                
+
                             }
-                            input{
-                                &:checked+ul{
+
+                            input {
+                                &:checked+ul {
                                     display: block;
                                 }
                             }
@@ -190,10 +213,11 @@ body {
                                         padding: 12px 0px 12px 24px;
                                         font-size: 13px;
                                         border: 1px solid rgba($color: #000000, $alpha: 0);
-    
+
                                         &:active {
                                             border: 1px dashed #000;
                                         }
+
                                         @media(max-width:860px) {
                                             padding: 14px 15px 15px;
                                             margin: 1px;
@@ -201,10 +225,12 @@ body {
                                         }
 
                                     }
+
                                     &:hover {
                                         text-decoration: underline;
                                     }
                                 }
+
                                 @media(max-width:860px) {
                                     padding: 1px 0px 0px 30px;
                                     display: none;
@@ -227,13 +253,14 @@ body {
                             padding: 12px 0px;
                             color: #000;
                             text-decoration: none;
+
                             @media(max-width:860px) {
                                 text-align: start;
                                 font-size: 13px;
                                 padding: 14px 15px 15px;
-                                        margin: 1px;
-                                        border:1px solid rgba($color: #000000, $alpha: 0);
-                                        border-bottom: 1px solid #e6e6e6;
+                                margin: 1px;
+                                border: 1px solid rgba($color: #000000, $alpha: 0);
+                                border-bottom: 1px solid #e6e6e6;
 
                             }
                         }
@@ -244,8 +271,8 @@ body {
                             display: block;
                             padding: 0px;
                             box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
-                        border-bottom:#000 solid 1px ;
-                            
+                            border-bottom: #000 solid 1px;
+
                         }
                     }
 
@@ -340,7 +367,7 @@ body {
 
                     @media(max-width:860px) {
                         display: flex;
-                        width: 82%;
+                        width: 90%;
                     }
 
                 }
@@ -504,6 +531,7 @@ body {
 
                     a {
                         color: #0067b8;
+                        font-weight: bold;
                     }
                 }
 
@@ -567,6 +595,7 @@ body {
                             color: #0067b8;
                             text-decoration: none;
                             margin: 16px 24px 16px 0px;
+                            font-weight: bold;
                             display: block;
                             width: fit-content;
                             float: left;
@@ -772,6 +801,7 @@ body {
                             text-decoration: none;
                             display: block;
                             width: fit-content;
+                            font-weight: bold;
 
                             &:hover {
                                 text-decoration: underline;
@@ -831,15 +861,14 @@ body {
 
         .back {
             width: 100%;
-            height: 30px;
-           
+
+
             .buttom {
-            position: sticky;
-            right: 20px;
-            bottom: 20px;
+                position: sticky;
+                right: 20px;
+                bottom: 20px;
                 float: right;
-                margin-right: 20px;
-                // display: inline-block;
+                // margin-right: 20px;
                 width: 100px;
                 height: 30px;
                 text-align: center;
@@ -851,7 +880,22 @@ body {
                     color: #000;
                     text-decoration: none;
                 }
+                @media(max-width:540px) {
+                    width: 100%;
+                    position: static;
+                    
+                }
             }
+            @media(max-width:540px) {
+                padding: 0px 12px;
+            }
+
+
+        }
+
+        .back-box {
+            width: 100%;
+            height: 60px;
         }
 
         .footer {
