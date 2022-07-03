@@ -415,6 +415,7 @@ body {
                             right: 11px;
                             border: 1px solid rgba(0, 0, 0, 0.336);
                             box-shadow: 2px 2px 2px #00000047;
+                            background-color: white;
                             z-index: 2;
 
                         }
@@ -433,6 +434,7 @@ body {
                             right: 11px;
                             border: 1px solid rgba(0, 0, 0, 0.336);
                             box-shadow: 2px 2px 2px #00000047;
+                            background-color: white;
                             z-index: 2;
                             text-align: center;
                         }
@@ -665,7 +667,7 @@ body {
         .container-mid {
             display: flex;
             justify-content: center;
-            padding: 0px 5%;
+            padding: 0px 8%;
             margin: 0px 0px 50px;
 
             .outer-frame {
@@ -777,7 +779,7 @@ body {
         .banner-2 {
             width: 100%;
             margin: 50px 0px 80px;
-            padding: 0px 5%;
+            padding: 0px 8%;
             position: relative;
 
             picture {
@@ -875,11 +877,13 @@ body {
         }
 
         .container-bot {
-            padding: 0px 5%;
+            padding: 0px 8%;
+
 
 
             h1 {
                 margin-bottom: 20px;
+                font-size: 36px;
 
 
                 @media (max-width:1086px) {
@@ -922,7 +926,7 @@ body {
 
                     .word {
                         h2 {
-                            font-size: 30px;
+                            font-size: 28px;
                             margin: 40px 0px 20px;
 
                             @media (max-width:1400px) {
@@ -1082,7 +1086,7 @@ body {
 
             .table {
                 width: 100%;
-                padding: 0px 5%;
+                padding: 0px 8%;
                 margin-bottom: 20px;
                 display: flex;
                 justify-content: space-between;

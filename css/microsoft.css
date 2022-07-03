@@ -340,6 +340,7 @@ body header #nav nav .search-login .search:hover::before {
   right: 11px;
   border: 1px solid rgba(0, 0, 0, 0.336);
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2784313725);
+  background-color: white;
   z-index: 2;
 }
 body header #nav nav .search-login .shop {
@@ -355,6 +356,7 @@ body header #nav nav .search-login .shop:hover::before {
   right: 11px;
   border: 1px solid rgba(0, 0, 0, 0.336);
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2784313725);
+  background-color: white;
   z-index: 2;
   text-align: center;
 }
@@ -538,7 +540,7 @@ body main .container-top ul li a {
 body main .container-mid {
   display: flex;
   justify-content: center;
-  padding: 0px 5%;
+  padding: 0px 8%;
   margin: 0px 0px 50px;
 }
 body main .container-mid .outer-frame {
@@ -632,7 +634,7 @@ body main .container-mid .outer-frame .commodity .link-group li a:hover {
 body main .banner-2 {
   width: 100%;
   margin: 50px 0px 80px;
-  padding: 0px 5%;
+  padding: 0px 8%;
   position: relative;
 }
 body main .banner-2 picture img {
@@ -719,10 +721,11 @@ body main .banner-2 .picture-word-shell .picture-word span:hover {
   }
 }
 body main .container-bot {
-  padding: 0px 5%;
+  padding: 0px 8%;
 }
 body main .container-bot h1 {
   margin-bottom: 20px;
+  font-size: 36px;
 }
 @media (max-width: 1086px) {
   body main .container-bot h1 {
@@ -755,7 +758,7 @@ body main .container-bot .information .card picture img {
   margin-bottom: 15px;
 }
 body main .container-bot .information .card .word h2 {
-  font-size: 30px;
+  font-size: 28px;
   margin: 40px 0px 20px;
 }
 @media (max-width: 1400px) {
@@ -895,7 +898,7 @@ body main .footer {
 }
 body main .footer .table {
   width: 100%;
-  padding: 0px 5%;
+  padding: 0px 8%;
   margin-bottom: 20px;
   display: flex;
   justify-content: space-between;
