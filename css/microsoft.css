@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0px;
   padding: 0px;
@@ -41,6 +42,7 @@ body header #nav nav label {
   float: right;
   line-height: 60px;
   font-size: 13px;
+  cursor: pointer;
 }
 @media (max-width: 860px) {
   body header #nav nav label .all span {
@@ -54,22 +56,21 @@ body header #nav nav label .all .menu {
   body header #nav nav label .all .menu {
     display: block;
     font-size: 30px;
-    margin-left: 10px;
-  }
-}
-@media (max-width: 860px) {
-  body header #nav nav label {
-    float: left;
+    width: 50px;
+    text-align: center;
   }
 }
 body header #nav nav input {
   display: none;
 }
-body header #nav nav #check:checked + div > .all-list {
+body header #nav nav #check:checked + label > div {
+  background-color: #f2f2f2;
+}
+body header #nav nav #check:checked ~ div > .all-list {
   display: flex;
 }
 @media (max-width: 860px) {
-  body header #nav nav #check:checked + div {
+  body header #nav nav #check:checked ~ div {
     display: block;
   }
 }
@@ -80,6 +81,48 @@ body header #nav nav .hamburger .list {
   position: absolute;
   display: flex;
   left: 20%;
+}
+body header #nav nav .hamburger .list label {
+  display: none;
+}
+body header #nav nav .hamburger .list label li {
+  padding: 0px 10px;
+}
+@media (max-width: 1086px) {
+  body header #nav nav .hamburger .list label {
+    display: block;
+  }
+}
+@media (max-width: 860px) {
+  body header #nav nav .hamburger .list label {
+    display: none;
+  }
+}
+body header #nav nav .hamburger .list #more:checked ~ .more {
+  display: block;
+}
+body header #nav nav .hamburger .list #more:checked + label {
+  background: #e6e6e6;
+}
+body header #nav nav .hamburger .list .more {
+  display: none;
+  z-index: 2;
+  position: absolute;
+  top: 60px;
+  right: -112px;
+  width: 168px;
+  border-bottom: 2px solid black;
+}
+body header #nav nav .hamburger .list .more a {
+  line-height: normal;
+  padding: 18px 0px 18px 24px;
+  width: 100%;
+  display: block;
+  background: #e6e6e6;
+}
+body header #nav nav .hamburger .list .more a:hover {
+  background-color: #d3d1d1;
+  text-decoration: none;
 }
 body header #nav nav .hamburger .list a {
   color: #000;
@@ -93,7 +136,7 @@ body header #nav nav .hamburger .list a {
 body header #nav nav .hamburger .list a:hover {
   text-decoration: underline;
   text-decoration-thickness: 2px;
-  text-underline-offset: 2px;
+  text-underline-offset: 6px;
 }
 body header #nav nav .hamburger .list a:active {
   border: 1px dashed #000;
@@ -108,6 +151,9 @@ body header #nav nav .hamburger .list a:active {
     margin: 1px;
     border-bottom: 1px solid #e6e6e6;
   }
+  body header #nav nav .hamburger .list a:hover {
+    text-decoration: none;
+  }
 }
 @media (max-width: 860px) {
   body header #nav nav .hamburger .list {
@@ -116,8 +162,18 @@ body header #nav nav .hamburger .list a:active {
     background-color: #f2f2f2;
   }
 }
+@media (max-width: 1086px) {
+  body header #nav nav .hamburger .list .xbox, body header #nav nav .hamburger .list .help {
+    display: none;
+  }
+}
+@media (max-width: 860px) {
+  body header #nav nav .hamburger .list .xbox, body header #nav nav .hamburger .list .help {
+    display: block;
+  }
+}
 body header #nav nav .hamburger .all-list {
-  width: 80%;
+  width: 75%;
   position: absolute;
   top: 60px;
   right: 10%;
@@ -126,7 +182,8 @@ body header #nav nav .hamburger .all-list {
   z-index: 2;
   background-color: #f2f2f2;
   display: none;
-  box-shadow: 0px 4px 5px black;
+  box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.342);
+  border-bottom: 2px solid black;
 }
 body header #nav nav .hamburger .all-list ul {
   width: 205px;
@@ -164,6 +221,9 @@ body header #nav nav .hamburger .all-list ul label i {
     display: block;
     float: right;
   }
+}
+body header #nav nav .hamburger .all-list ul input:checked + label {
+  background-color: #616161;
 }
 body header #nav nav .hamburger .all-list ul input:checked + ul {
   display: block;
@@ -207,6 +267,7 @@ body header #nav nav .hamburger .all-list > a {
   padding: 12px 0px;
   color: #000;
   text-decoration: none;
+  background-color: #e6e6e6;
 }
 @media (max-width: 860px) {
   body header #nav nav .hamburger .all-list > a {
@@ -261,10 +322,41 @@ body header #nav nav .search-login .link a:hover {
 body header #nav nav .search-login .link:active {
   border: 1px dashed #000;
 }
+body header #nav nav .search-login .search {
+  position: relative;
+}
 @media (max-width: 860px) {
   body header #nav nav .search-login .search {
     flex-grow: 1;
   }
+}
+body header #nav nav .search-login .search:hover::before {
+  content: "搜索Microsoft.com";
+  line-height: 20px;
+  font-size: 11px;
+  width: 110px;
+  position: absolute;
+  top: 45px;
+  right: 11px;
+  border: 1px solid rgba(0, 0, 0, 0.336);
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2784313725);
+  z-index: 2;
+}
+body header #nav nav .search-login .shop {
+  position: relative;
+}
+body header #nav nav .search-login .shop:hover::before {
+  content: "0個項目在購物車";
+  line-height: 20px;
+  font-size: 11px;
+  width: 98px;
+  position: absolute;
+  top: 45px;
+  right: 11px;
+  border: 1px solid rgba(0, 0, 0, 0.336);
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2784313725);
+  z-index: 2;
+  text-align: center;
 }
 @media (max-width: 860px) {
   body header #nav nav .search-login .shop {
@@ -300,6 +392,7 @@ body header #nav nav .search-login .login a img {
   body header #nav nav .search-login {
     display: flex;
     width: 90%;
+    order: 1;
   }
 }
 @media (max-width: 1086px) {
@@ -310,10 +403,13 @@ body header #nav nav .search-login .login a img {
 @media (max-width: 860px) {
   body header #nav nav {
     padding: 0%;
+    display: flex;
+    flex-wrap: nowrap;
   }
 }
 body main .banner {
   position: relative;
+  cursor: pointer;
 }
 body main .banner picture img {
   width: 100%;
@@ -330,6 +426,7 @@ body main .banner .picture-word-shell .picture-word {
 }
 body main .banner .picture-word-shell .picture-word .news-release {
   display: inline-block;
+  font-weight: bold;
   padding: 5px 15px;
   background-color: #ffb900;
   margin-bottom: 15px;
@@ -337,6 +434,7 @@ body main .banner .picture-word-shell .picture-word .news-release {
 body main .banner .picture-word-shell .picture-word h1 {
   font-size: 37px;
   margin-bottom: 15px;
+  font-weight: bold;
 }
 body main .banner .picture-word-shell .picture-word .describe {
   margin-bottom: 15px;
@@ -348,6 +446,10 @@ body main .banner .picture-word-shell .picture-word p {
   color: white;
   font-size: 15px;
   padding: 10px 15px;
+  font-weight: bold;
+}
+body main .banner .picture-word-shell .picture-word p:hover {
+  background-color: #00599c;
 }
 @media (max-width: 1086px) {
   body main .banner .picture-word-shell .picture-word {
@@ -396,11 +498,6 @@ body main .banner .box {
     margin-bottom: 20px;
   }
 }
-body main .carousel-button {
-  width: 100%;
-  height: 50px;
-  background-color: bisque;
-}
 body main .container-top {
   padding-top: 50px;
   margin-bottom: 80px;
@@ -427,6 +524,7 @@ body main .container-top ul li {
 body main .container-top ul li img {
   width: 40px;
   height: 40px;
+  cursor: pointer;
 }
 body main .container-top ul li a {
   color: #0067b8;
@@ -450,6 +548,9 @@ body main .container-mid .outer-frame {
 body main .container-mid .outer-frame .commodity {
   width: calc(25% - 12px);
 }
+body main .container-mid .outer-frame .commodity:not(:first-child) {
+  cursor: pointer;
+}
 body main .container-mid .outer-frame .commodity picture img {
   width: 100%;
   margin-bottom: 20px;
@@ -471,7 +572,21 @@ body main .container-mid .outer-frame .commodity .word h2 {
     font-size: 21px;
   }
 }
-body main .container-mid .outer-frame .commodity .link-group a {
+body main .container-mid .outer-frame .commodity .link-group li {
+  position: relative;
+  display: inline-block;
+}
+body main .container-mid .outer-frame .commodity .link-group li::after {
+  content: ">";
+  color: #0067b8;
+  position: absolute;
+  top: 15px;
+  right: 10px;
+}
+body main .container-mid .outer-frame .commodity .link-group li:hover::after {
+  right: 0px;
+}
+body main .container-mid .outer-frame .commodity .link-group li a {
   font-size: 18px;
   color: #0067b8;
   text-decoration: none;
@@ -483,14 +598,11 @@ body main .container-mid .outer-frame .commodity .link-group a {
   width: fit-content;
   float: left;
 }
-body main .container-mid .outer-frame .commodity .link-group a:hover {
+body main .container-mid .outer-frame .commodity .link-group li a:hover {
   text-decoration: underline;
 }
-body main .container-mid .outer-frame .commodity .link-group a::after {
-  content: ">";
-}
 @media (max-width: 1086px) {
-  body main .container-mid .outer-frame .commodity .link-group a {
+  body main .container-mid .outer-frame .commodity .link-group li a {
     font-size: 16px;
   }
 }
@@ -525,6 +637,7 @@ body main .banner-2 {
 }
 body main .banner-2 picture img {
   width: 100%;
+  cursor: pointer;
 }
 body main .banner-2 .picture-word-shell {
   width: 90%;
@@ -532,6 +645,7 @@ body main .banner-2 .picture-word-shell {
   top: 0;
   padding-left: 5%;
   padding-top: 10%;
+  cursor: pointer;
 }
 body main .banner-2 .picture-word-shell .picture-word {
   width: 24%;
@@ -539,6 +653,7 @@ body main .banner-2 .picture-word-shell .picture-word {
 body main .banner-2 .picture-word-shell .picture-word h1 {
   font-size: 40px;
   margin-bottom: 15px;
+  font-weight: bold;
 }
 @media (max-width: 1400px) {
   body main .banner-2 .picture-word-shell .picture-word h1 {
@@ -546,14 +661,18 @@ body main .banner-2 .picture-word-shell .picture-word h1 {
   }
 }
 body main .banner-2 .picture-word-shell .picture-word .describe {
-  margin-bottom: 15px;
+  margin-bottom: 30px;
 }
-body main .banner-2 .picture-word-shell .picture-word button {
+body main .banner-2 .picture-word-shell .picture-word span {
   border: 0px;
   background-color: #0067b8;
   color: white;
   font-size: 15px;
   padding: 10px 15px;
+  font-weight: bold;
+}
+body main .banner-2 .picture-word-shell .picture-word span:hover {
+  background-color: #00599c;
 }
 @media (max-width: 1086px) {
   body main .banner-2 .picture-word-shell .picture-word {
@@ -619,6 +738,7 @@ body main .container-bot .information {
 body main .container-bot .information .card {
   width: calc(25% - 12px);
   margin-bottom: 60px;
+  cursor: pointer;
 }
 body main .container-bot .information .card ul {
   list-style-type: none;
@@ -628,6 +748,7 @@ body main .container-bot .information .card ul li {
   display: inline-block;
   padding: 5px 15px;
   background-color: #ffb900;
+  font-weight: bold;
 }
 body main .container-bot .information .card picture img {
   width: 100%;
@@ -650,7 +771,11 @@ body main .container-bot .information .card .word h2 {
 body main .container-bot .information .card .word p {
   margin-bottom: 20px;
 }
-body main .container-bot .information .card .word a {
+body main .container-bot .information .card .word li {
+  display: inline-block;
+  position: relative;
+}
+body main .container-bot .information .card .word li a {
   font-size: 18px;
   color: #0067b8;
   text-decoration: none;
@@ -660,13 +785,26 @@ body main .container-bot .information .card .word a {
   width: fit-content;
   font-weight: bold;
 }
-body main .container-bot .information .card .word a:hover {
+body main .container-bot .information .card .word li a:hover {
   text-decoration: underline;
 }
+body main .container-bot .information .card .word li a:hover::after {
+  margin-left: 5px;
+}
 @media (max-width: 1086px) {
-  body main .container-bot .information .card .word a {
+  body main .container-bot .information .card .word li a {
     font-size: 16px;
   }
+}
+body main .container-bot .information .card .word li::after {
+  content: ">";
+  color: #0067b8;
+  position: absolute;
+  top: 0;
+  right: -15px;
+}
+body main .container-bot .information .card .word li:hover::after {
+  right: -25px;
 }
 @media (max-width: 1086px) {
   body main .container-bot .information .card {
@@ -701,6 +839,7 @@ body main .container-bot .community ul li {
 body main .container-bot .community ul img {
   width: 32px;
   height: 32px;
+  cursor: pointer;
 }
 @media (max-width: 1086px) {
   body main .container-bot .community {
@@ -725,7 +864,11 @@ body main .back .buttom {
   height: 30px;
   text-align: center;
   line-height: 30px;
-  background-color: #616161;
+  background-color: #bebebe;
+}
+body main .back .buttom:hover {
+  background-color: white;
+  box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.212);
 }
 body main .back .buttom a {
   color: #000;
@@ -837,6 +980,11 @@ body main .footer .statement .microsoft-link ul li a:hover {
 @media (max-width: 540px) {
   body main .footer .statement .microsoft-link ul li {
     margin-right: 5px;
+  }
+}
+@media (max-width: 540px) {
+  body main .footer .statement .microsoft-link ul {
+    flex-wrap: wrap;
   }
 }
 @media (max-width: 1086px) {
