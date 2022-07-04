@@ -201,7 +201,7 @@ body header #nav nav .hamburger .all-list ul label li {
 }
 @media (max-width: 860px) {
   body header #nav nav .hamburger .all-list ul label li {
-    font-weight: lighter;
+    font-weight: normal;
     padding: 14px 15px 15px;
     margin: 1px;
     border: 1px solid rgba(0, 0, 0, 0);
@@ -249,6 +249,11 @@ body header #nav nav .hamburger .all-list ul ul a li:active {
 }
 body header #nav nav .hamburger .all-list ul ul a:hover {
   text-decoration: underline;
+}
+@media (max-width: 860px) {
+  body header #nav nav .hamburger .all-list ul ul a:hover {
+    text-decoration: none;
+  }
 }
 @media (max-width: 860px) {
   body header #nav nav .hamburger .all-list ul ul {
@@ -342,6 +347,11 @@ body header #nav nav .search-login .search:hover::before {
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2784313725);
   background-color: white;
   z-index: 2;
+}
+@media (max-width: 860px) {
+  body header #nav nav .search-login .search:hover::before {
+    display: none;
+  }
 }
 body header #nav nav .search-login .shop {
   position: relative;
@@ -583,7 +593,8 @@ body main .container-mid .outer-frame .commodity .link-group li::after {
   color: #0067b8;
   position: absolute;
   top: 15px;
-  right: 10px;
+  right: 5px;
+  transition: all 0.5s;
 }
 body main .container-mid .outer-frame .commodity .link-group li:hover::after {
   right: 0px;
@@ -791,9 +802,6 @@ body main .container-bot .information .card .word li a {
 body main .container-bot .information .card .word li a:hover {
   text-decoration: underline;
 }
-body main .container-bot .information .card .word li a:hover::after {
-  margin-left: 5px;
-}
 @media (max-width: 1086px) {
   body main .container-bot .information .card .word li a {
     font-size: 16px;
@@ -805,9 +813,10 @@ body main .container-bot .information .card .word li::after {
   position: absolute;
   top: 0;
   right: -15px;
+  transition: all 0.5s;
 }
 body main .container-bot .information .card .word li:hover::after {
-  right: -25px;
+  right: -20px;
 }
 @media (max-width: 1086px) {
   body main .container-bot .information .card {
@@ -838,6 +847,7 @@ body main .container-bot .community ul {
 }
 body main .container-bot .community ul li {
   list-style-type: none;
+  font-size: 16px;
 }
 body main .container-bot .community ul img {
   width: 32px;
@@ -858,15 +868,16 @@ body main .back {
   width: 100%;
 }
 body main .back .buttom {
+  font-size: 18px;
   position: -webkit-sticky;
   position: sticky;
   right: 20px;
   bottom: 20px;
   float: right;
   width: 100px;
-  height: 30px;
+  height: 40px;
   text-align: center;
-  line-height: 30px;
+  line-height: 40px;
   background-color: #bebebe;
 }
 body main .back .buttom:hover {
@@ -969,7 +980,7 @@ body main .footer .statement .microsoft-link ul {
   display: flex;
 }
 body main .footer .statement .microsoft-link ul li {
-  margin-right: 12px;
+  margin-right: 24px;
   margin-bottom: 20px;
   font-size: 11px;
 }
@@ -985,7 +996,7 @@ body main .footer .statement .microsoft-link ul li a:hover {
     margin-right: 5px;
   }
 }
-@media (max-width: 540px) {
+@media (max-width: 860px) {
   body main .footer .statement .microsoft-link ul {
     flex-wrap: wrap;
   }

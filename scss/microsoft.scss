@@ -243,7 +243,7 @@ body {
                                     display: block;
 
                                     @media(max-width:860px) {
-                                        font-weight: lighter;
+                                        font-weight: normal;
                                         padding: 14px 15px 15px;
                                         margin: 1px;
                                         border: 1px solid rgba($color: #000000, $alpha: 0);
@@ -305,6 +305,9 @@ body {
 
                                     &:hover {
                                         text-decoration: underline;
+                                        @media(max-width:860px) {
+                                            text-decoration: none;
+                                        }
                                     }
                                 }
 
@@ -417,6 +420,9 @@ body {
                             box-shadow: 2px 2px 2px #00000047;
                             background-color: white;
                             z-index: 2;
+                            @media (max-width:860px) {
+                                display: none;
+                            }
 
                         }
 
@@ -720,11 +726,13 @@ body {
                                 color: #0067b8;
                                 position: absolute;
                                 top: 15px;
-                                right: 10px;
+                                right: 5px;
+                                transition:all 0.5s;
                             }
 
                             &:hover::after {
                                 right: 0px;
+                                
 
                             }
 
@@ -856,7 +864,6 @@ body {
 
                 @media(max-width:860px) {
                     position: unset;
-                    ;
                     padding: 0px;
                     width: 100%;
                     // background-color: rgb(197, 17, 17);
@@ -957,10 +964,7 @@ body {
 
                                 &:hover {
                                     text-decoration: underline;
-
-                                    &::after {
-                                        margin-left: 5px;
-                                    }
+                                
                                 }
 
 
@@ -975,10 +979,11 @@ body {
                                 position: absolute;
                                 top: 0;
                                 right: -15px;
+                                transition:all 0.5s;
                             }
 
                             &:hover::after {
-                                right: -25px;
+                                right: -20px;
 
                             }
 
@@ -1015,6 +1020,7 @@ body {
 
                     li {
                         list-style-type: none;
+                        font-size: 16px;
                     }
 
                     img {
@@ -1039,15 +1045,16 @@ body {
 
 
             .buttom {
+                font-size: 18px;
                 position: sticky;
                 right: 20px;
                 bottom: 20px;
                 float: right;
                 // margin-right: 20px;
                 width: 100px;
-                height: 30px;
+                height: 40px;
                 text-align: center;
-                line-height: 30px;
+                line-height: 40px;
                 // padding: 10px 12px;
                 background-color: #bebebe;
 
@@ -1169,7 +1176,7 @@ body {
                         display: flex;
 
                         li {
-                            margin-right: 12px;
+                            margin-right: 24px;
                             margin-bottom: 20px;
                             font-size: 11px;
 
@@ -1189,7 +1196,7 @@ body {
                             }
                         }
 
-                        @media(max-width:540px) {
+                        @media(max-width:860px) {
                             flex-wrap: wrap;
 
 
