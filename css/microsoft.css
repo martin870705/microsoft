@@ -16,6 +16,7 @@ body header #nav nav {
   width: 100%;
   height: 60px;
   padding: 0px 8%;
+  color: #262626;
 }
 body header #nav nav .logo {
   float: left;
@@ -45,9 +46,6 @@ body header #nav nav label {
   cursor: pointer;
   border: 1px dashed rgba(0, 0, 0, 0);
 }
-body header #nav nav label:focus {
-  border: 1px dashed black;
-}
 @media (max-width: 860px) {
   body header #nav nav label .all span {
     display: none;
@@ -72,6 +70,9 @@ body header #nav nav label .all .menu {
 }
 body header #nav nav input {
   display: none;
+}
+body header #nav nav #check:checked + label {
+  border: 1px dashed black;
 }
 body header #nav nav #check:checked + label > div {
   background-color: #f2f2f2;
@@ -139,7 +140,7 @@ body header #nav nav .hamburger .list .more a:hover {
   text-decoration: none;
 }
 body header #nav nav .hamburger .list a {
-  color: #000;
+  color: #262626;
   text-decoration: none;
   height: 50px;
   line-height: 60px;
@@ -333,7 +334,7 @@ body header #nav nav .search-login .link {
   border: 1px solid rgba(0, 0, 0, 0);
 }
 body header #nav nav .search-login .link a {
-  color: #000;
+  color: #262626;
   text-decoration: none;
 }
 body header #nav nav .search-login .link:not(:last-child) a:hover {
@@ -347,6 +348,9 @@ body header #nav nav .search-login .link:active {
 body header #nav nav .search-login .search {
   position: relative;
   margin-right: 36px;
+}
+body header #nav nav .search-login .search i {
+  color: #262626;
 }
 @media (max-width: 860px) {
   body header #nav nav .search-login .search {
@@ -374,6 +378,9 @@ body header #nav nav .search-login .search:hover::before {
 }
 body header #nav nav .search-login .shop {
   position: relative;
+}
+body header #nav nav .search-login .shop i {
+  color: #262626;
 }
 body header #nav nav .search-login .shop:hover::before {
   content: "0個項目在購物車";
@@ -555,8 +562,8 @@ body main .container-top ul {
   flex-wrap: wrap;
 }
 body main .container-top ul li {
-  width: 200px;
   height: 100px;
+  padding: 0px 20px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -570,7 +577,17 @@ body main .container-top ul li img {
 }
 body main .container-top ul li a {
   color: #0067b8;
+  position: relative;
   font-weight: bold;
+}
+body main .container-top ul li a:active::before {
+  content: "";
+  border: 3px dotted #0067b8;
+  position: absolute;
+  left: -2px;
+  top: -2px;
+  width: 100%;
+  height: 100%;
 }
 @media (max-width: 860px) {
   body main .container-top {
@@ -630,6 +647,7 @@ body main .container-mid .outer-frame .commodity .link-group li:hover::after {
   right: 0px;
 }
 body main .container-mid .outer-frame .commodity .link-group li a {
+  position: relative;
   font-size: 18px;
   color: #0067b8;
   text-decoration: none;
@@ -643,6 +661,15 @@ body main .container-mid .outer-frame .commodity .link-group li a {
 }
 body main .container-mid .outer-frame .commodity .link-group li a:hover {
   text-decoration: underline;
+}
+body main .container-mid .outer-frame .commodity .link-group li a:active::before {
+  content: "";
+  border: 3px dotted #0067b8;
+  position: absolute;
+  left: -2px;
+  top: -2px;
+  width: calc(100% + 30px);
+  height: 100%;
 }
 @media (max-width: 1086px) {
   body main .container-mid .outer-frame .commodity .link-group li a {
@@ -820,6 +847,7 @@ body main .container-bot .information .card .word li {
   position: relative;
 }
 body main .container-bot .information .card .word li a {
+  position: relative;
   font-size: 18px;
   color: #0067b8;
   text-decoration: none;
@@ -831,6 +859,15 @@ body main .container-bot .information .card .word li a {
 }
 body main .container-bot .information .card .word li a:hover {
   text-decoration: underline;
+}
+body main .container-bot .information .card .word li a:active::before {
+  content: "";
+  border: 3px dotted #0067b8;
+  position: absolute;
+  left: -2px;
+  top: -2px;
+  width: calc(100% + 25px);
+  height: 100%;
 }
 @media (max-width: 1086px) {
   body main .container-bot .information .card .word li a {
@@ -880,9 +917,13 @@ body main .container-bot .community ul li {
   font-size: 16px;
 }
 body main .container-bot .community ul img {
-  width: 32px;
-  height: 32px;
+  width: 38px;
+  height: 38px;
   cursor: pointer;
+  border: 3px dashed rgba(0, 104, 184, 0);
+}
+body main .container-bot .community ul img:active {
+  border: 3px dotted #0067b8;
 }
 @media (max-width: 1086px) {
   body main .container-bot .community {
@@ -951,6 +992,7 @@ body main .footer .table .list {
 body main .footer .table .list p {
   padding: 30px 0px 8px 0px;
   font-size: 15px;
+  color: #616161;
 }
 body main .footer .table .list li {
   padding: 8px 0px;
