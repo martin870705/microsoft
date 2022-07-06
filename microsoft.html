@@ -11,7 +11,7 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="/css/microsoft.css">
+    <link rel="stylesheet" href="./css/microsoft.css">
     <title>Microsoft – 雲端、電腦、應用程式和遊戲</title>
     <style>
         *:root {
@@ -42,7 +42,7 @@
             transition: all 0s 2s ease;
         }
         .swiper-button-next:hover::before{
-            transition: all 0s 2s ease;
+            transition: all 0s 200s ease;
             content: "下一步";
             position: absolute;
             margin-top: 30px;
@@ -50,7 +50,7 @@
             border: 1px solid #000;
         }
         .swiper-button-prev:hover::before{
-            transition: all 0s 2s ease;
+            transition: all 0s 200s ease;
             content: "上一個";
             position: absolute;
              margin-top: 30px;
@@ -68,38 +68,46 @@
         .swiper-pagination-fraction {
             width: 14%;
         }
-
+        
         .swiper-button-next:after,
         .swiper-button-prev:after {
             font-size: 30px;
             transition: all 0.5s;
         }
-
+        
         .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet,
         .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
             margin: 0 var(--swiper-pagination-bullet-horizontal-gap, 8px);
         }
-
+        
         .swiper-pagination-bullet {
             width: var(--swiper-pagination-bullet-width, var(--swiper-pagination-bullet-size, 12px));
             height: var(--swiper-pagination-bullet-height, var(--swiper-pagination-bullet-size, 12px))
         }
-
+        
         .swiper-button-next:hover::after {
             margin-left: 20px;
-
+            
         }
-
+        
         .swiper-button-prev:hover::after {
             margin-right: 20px;
         }
-
+        
         .swiper-button-next:active,
         .swiper-button-prev:active {
             border: 4px dashed black;
-
+            
         }
-    </style>
+        @media (max-width:540px) {
+            .swiper-horizontal>.swiper-pagination-bullets,
+        .swiper-pagination-bullets.swiper-pagination-horizontal,
+        .swiper-pagination-custom,
+        .swiper-pagination-fraction {
+            width: 25%;
+        }
+        }
+        </style>
 </head>
 
 <body>
@@ -107,7 +115,7 @@
         <section id="nav">
             <nav>
                 <div class="logo">
-                    <img src="/image/logo.png" alt="">
+                    <img src="./image/logo.png" alt="">
                 </div>
 
                 <div class="search-login">
@@ -621,9 +629,12 @@
             </div>
         </div>
         <div class="back-box"></div>
+        
+    </main>
+    <footer>
         <div class="footer">
             <div class="table">
-
+    
                 <div class="latest-trends list">
                     <p>最新動向</p>
                     <ul>
@@ -633,7 +644,7 @@
                         <li><a href="">Surface Pro</a>
                         </li>
                         <li><a href="">Windows 11 應用程式</a></li>
-
+    
                     </ul>
                 </div>
                 <div class="Microsoft-Store list">
@@ -683,7 +694,7 @@
                         <li><a href="">AppSource</a></li>
                         <li><a href="">Microsoft Power Platform</a></li>
                         <li><a href="">Visual Studio</a></li>
-
+    
                     </ul>
                 </div>
                 <div class="company list">
@@ -694,7 +705,7 @@
                         <li><a href="">Microsoft 隱私權</a></li>
                         <li><a href="">投資者</a></li>
                         <li><a href="">永續性</a></li>
-
+    
                     </ul>
                 </div>
             </div>
@@ -715,7 +726,7 @@
             </div>
         </div>
 
-    </main>
+    </footer>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
