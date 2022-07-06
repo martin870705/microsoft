@@ -250,7 +250,7 @@ body {
                     }
 
                     .all-list {
-                        width: 75%;
+                        width: 1230px;
                         position: absolute;
                         top: 58px;
                         right: 10%;
@@ -355,6 +355,7 @@ body {
                                 }
 
                             }
+                            
 
 
 
@@ -383,7 +384,11 @@ body {
 
                             }
                         }
+                        
+                        @media(max-width:1400px) {
+                            width: 75%;
 
+                        }
                         @media(max-width:860px) {
                             width: 100%;
                             position: static;

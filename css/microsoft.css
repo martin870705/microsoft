@@ -190,7 +190,7 @@ body header #nav nav .hamburger .list .help {
   }
 }
 body header #nav nav .hamburger .all-list {
-  width: 75%;
+  width: 1230px;
   position: absolute;
   top: 58px;
   right: 10%;
@@ -300,6 +300,11 @@ body header #nav nav .hamburger .all-list > a {
     margin: 1px;
     border: 1px solid rgba(0, 0, 0, 0);
     border-bottom: 1px solid #e6e6e6;
+  }
+}
+@media (max-width: 1400px) {
+  body header #nav nav .hamburger .all-list {
+    width: 75%;
   }
 }
 @media (max-width: 860px) {
